@@ -1,0 +1,12 @@
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\bin\Debug\net10.0\OrderApi.Domain.deps.json
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\bin\Debug\net10.0\OrderApi.Domain.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\bin\Debug\net10.0\OrderApi.Domain.pdb
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\obj\Debug\net10.0\OrderApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\obj\Debug\net10.0\OrderApi.Domain.AssemblyInfoInputs.cache
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\obj\Debug\net10.0\OrderApi.Domain.AssemblyInfo.cs
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\obj\Debug\net10.0\OrderApi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\obj\Debug\net10.0\OrderApi.Domain.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\obj\Debug\net10.0\refint\OrderApi.Domain.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\obj\Debug\net10.0\OrderApi.Domain.pdb
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\obj\Debug\net10.0\ref\OrderApi.Domain.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Domain\obj\Debug\net10.0\OrderApi.E18A5CB8.Up2Date

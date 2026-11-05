@@ -1,0 +1,17 @@
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\bin\Debug\net10.0\OrderApi.Application.deps.json
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\bin\Debug\net10.0\OrderApi.Application.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\bin\Debug\net10.0\OrderApi.Application.pdb
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\bin\Debug\net10.0\eCommerceCar.SharedLibrary.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\bin\Debug\net10.0\OrderApi.Domain.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\bin\Debug\net10.0\eCommerceCar.SharedLibrary.pdb
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\bin\Debug\net10.0\OrderApi.Domain.pdb
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.Application.csproj.AssemblyReference.cache
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.Application.AssemblyInfoInputs.cache
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.Application.AssemblyInfo.cs
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.Application.csproj.CoreCompileInputs.cache
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.A1672EEC.Up2Date
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.Application.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\refint\OrderApi.Application.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.Application.pdb
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\ref\OrderApi.Application.dll
