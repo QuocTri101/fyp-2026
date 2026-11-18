@@ -1,0 +1,390 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.presentation\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|solutionrelative:orderapi.presentation\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|solutionrelative:orderapi.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|solutionrelative:orderapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.application\\dtos\\conversions\\orderconversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|solutionrelative:orderapi.application\\dtos\\conversions\\orderconversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B82A430-7219-D8F2-52F5-2A50A08D4A3A}|..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\eCommerceCar.SharedLibrary.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.sharedlibrary.solution\\ecommercecar.sharedlibrary\\dependencyinjection\\sharedservicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B82A430-7219-D8F2-52F5-2A50A08D4A3A}|..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\eCommerceCar.SharedLibrary.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.sharedlibrary.solution\\ecommercecar.sharedlibrary\\middleware\\listentoonlyapigateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.application\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|solutionrelative:orderapi.application\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.application\\dtos\\orderdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|solutionrelative:orderapi.application\\dtos\\orderdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.application\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|solutionrelative:orderapi.application\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.application\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|solutionrelative:orderapi.application\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE8B0E2-9E12-F4D3-B25F-C644877005CB}|OrderApi.Domain\\OrderApi.Domain.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE8B0E2-9E12-F4D3-B25F-C644877005CB}|OrderApi.Domain\\OrderApi.Domain.csproj|solutionrelative:orderapi.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|solutionrelative:orderapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.application\\dependancyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|solutionrelative:orderapi.application\\dependancyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|solutionrelative:orderapi.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.infrastructure\\data\\orderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|solutionrelative:orderapi.infrastructure\\data\\orderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.presentation\\orderapi.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{327B1C51-71BA-95E2-5616-1F29D61BAD52}|OrderApi.Presentation\\OrderApi.Presentation.csproj|solutionrelative:orderapi.presentation\\orderapi.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.infrastructure\\data\\migrations\\20261105214448_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|solutionrelative:orderapi.infrastructure\\data\\migrations\\20261105214448_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.application\\interfaces\\iorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|solutionrelative:orderapi.application\\interfaces\\iorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.application\\dtos\\appuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E2A9655-7246-A8FD-CD97-F6AB85C24EA0}|OrderApi.Application\\OrderApi.Application.csproj|solutionrelative:orderapi.application\\dtos\\appuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.infrastructure\\dependancyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|solutionrelative:orderapi.infrastructure\\dependancyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.infrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|solutionrelative:orderapi.infrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SharedServiceContainer.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "RelativeToolTip": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwCQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T03:50:30.695Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ServiceContainer.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Infrastructure\\DependancyInjection\\ServiceContainer.cs",
+              "RelativeDocumentMoniker": "OrderApi.Infrastructure\\DependancyInjection\\ServiceContainer.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Infrastructure\\DependancyInjection\\ServiceContainer.cs",
+              "RelativeToolTip": "OrderApi.Infrastructure\\DependancyInjection\\ServiceContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:41:04.386Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "OrderApi.Presentation\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\Properties\\launchSettings.json",
+              "RelativeToolTip": "OrderApi.Presentation\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T19:46:22.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "OrderApi.Presentation\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "OrderApi.Presentation\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T17:32:33.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "RelativeToolTip": "..\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwJMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T20:26:00.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "OrderApi.Presentation\\appsettings.json",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\appsettings.json",
+              "RelativeToolTip": "OrderApi.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-12T23:47:00.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ListenToOnlyApiGateway.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "RelativeToolTip": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T03:50:16.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "OrderApi.Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\Program.cs",
+              "RelativeToolTip": "OrderApi.Presentation\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T03:51:55.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OrderDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Infrastructure\\Data\\OrderDbContext.cs",
+              "RelativeDocumentMoniker": "OrderApi.Infrastructure\\Data\\OrderDbContext.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Infrastructure\\Data\\OrderDbContext.cs",
+              "RelativeToolTip": "OrderApi.Infrastructure\\Data\\OrderDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-13T00:41:06.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20261105214448_First.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Infrastructure\\Data\\Migrations\\20261105214448_First.cs",
+              "RelativeDocumentMoniker": "OrderApi.Infrastructure\\Data\\Migrations\\20261105214448_First.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Infrastructure\\Data\\Migrations\\20261105214448_First.cs",
+              "RelativeToolTip": "OrderApi.Infrastructure\\Data\\Migrations\\20261105214448_First.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T21:44:48.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OrderApi.Presentation.csproj",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\OrderApi.Presentation.csproj",
+              "RelativeDocumentMoniker": "OrderApi.Presentation\\OrderApi.Presentation.csproj",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\OrderApi.Presentation.csproj",
+              "RelativeToolTip": "OrderApi.Presentation\\OrderApi.Presentation.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-05T21:38:04.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Domain\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "OrderApi.Domain\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Domain\\Entities\\Order.cs",
+              "RelativeToolTip": "OrderApi.Domain\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T21:08:08.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "OrderApi.Application\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\Services\\OrderService.cs",
+              "RelativeToolTip": "OrderApi.Application\\Services\\OrderService.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAwEkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:54:40.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\Services\\IOrderService.cs",
+              "RelativeDocumentMoniker": "OrderApi.Application\\Services\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\Services\\IOrderService.cs",
+              "RelativeToolTip": "OrderApi.Application\\Services\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:54:37.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ServiceContainer.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DependancyInjection\\ServiceContainer.cs",
+              "RelativeDocumentMoniker": "OrderApi.Application\\DependancyInjection\\ServiceContainer.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DependancyInjection\\ServiceContainer.cs",
+              "RelativeToolTip": "OrderApi.Application\\DependancyInjection\\ServiceContainer.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:50:25.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderDetailsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\OrderDetailsDTO.cs",
+              "RelativeDocumentMoniker": "OrderApi.Application\\DTOs\\OrderDetailsDTO.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\OrderDetailsDTO.cs",
+              "RelativeToolTip": "OrderApi.Application\\DTOs\\OrderDetailsDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:47:02.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "OrderApi.Application\\DTOs\\ProductDTO.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\ProductDTO.cs",
+              "RelativeToolTip": "OrderApi.Application\\DTOs\\ProductDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:44:47.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderConversion.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\Conversions\\OrderConversion.cs",
+              "RelativeDocumentMoniker": "OrderApi.Application\\DTOs\\Conversions\\OrderConversion.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\Conversions\\OrderConversion.cs",
+              "RelativeToolTip": "OrderApi.Application\\DTOs\\Conversions\\OrderConversion.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:41:06.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\AppUserDTO.cs",
+              "RelativeDocumentMoniker": "OrderApi.Application\\DTOs\\AppUserDTO.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\AppUserDTO.cs",
+              "RelativeToolTip": "OrderApi.Application\\DTOs\\AppUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:40:54.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderDTO.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\OrderDTO.cs",
+              "RelativeDocumentMoniker": "OrderApi.Application\\DTOs\\OrderDTO.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\DTOs\\OrderDTO.cs",
+              "RelativeToolTip": "OrderApi.Application\\DTOs\\OrderDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:39:25.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IOrder.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\Interfaces\\IOrder.cs",
+              "RelativeDocumentMoniker": "OrderApi.Application\\Interfaces\\IOrder.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Application\\Interfaces\\IOrder.cs",
+              "RelativeToolTip": "OrderApi.Application\\Interfaces\\IOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:36:09.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Infrastructure\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "OrderApi.Infrastructure\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Infrastructure\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "OrderApi.Infrastructure\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T20:28:57.426Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.apigateway.solution\\apigateway.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|solutionrelative:apigateway.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B82A430-7219-D8F2-52F5-2A50A08D4A3A}|..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\eCommerceCar.SharedLibrary.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.sharedlibrary.solution\\ecommercecar.sharedlibrary\\middleware\\listentoonlyapigateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.apigateway.solution\\apigateway.presentation\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|solutionrelative:apigateway.presentation\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.apigateway.solution\\apigateway.presentation\\middleware\\attachsignaturetorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|solutionrelative:apigateway.presentation\\middleware\\attachsignaturetorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B82A430-7219-D8F2-52F5-2A50A08D4A3A}|..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\eCommerceCar.SharedLibrary.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.sharedlibrary.solution\\ecommercecar.sharedlibrary\\dependencyinjection\\sharedservicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B82A430-7219-D8F2-52F5-2A50A08D4A3A}|..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\eCommerceCar.SharedLibrary.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.sharedlibrary.solution\\ecommercecar.sharedlibrary\\dependencyinjection\\jwtauthenticationscheme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.apigateway.solution\\apigateway.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|solutionrelative:apigateway.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\secret_stache\\T3CH5\\Microsoft Visual Studio\\18\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ECommerceDB/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ECommerceDB/True/SqlTable/dbo.Orders.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.apigateway.solution\\apigateway.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5B43F476-77F4-1663-07E3-F867459623B5}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|solutionrelative:apigateway.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "RelativeDocumentMoniker": "ApiGateway.Presentation\\ocelot.json",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "RelativeToolTip": "ApiGateway.Presentation\\ocelot.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T00:27:21.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListenToOnlyApiGateway.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "RelativeToolTip": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T01:12:01.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "ApiGateway.Presentation\\appsettings.json",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\appsettings.json",
+              "RelativeToolTip": "ApiGateway.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T09:17:37.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AttachSignatureToRequest.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\Middleware\\AttachSignatureToRequest.cs",
+              "RelativeDocumentMoniker": "ApiGateway.Presentation\\Middleware\\AttachSignatureToRequest.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\Middleware\\AttachSignatureToRequest.cs",
+              "RelativeToolTip": "ApiGateway.Presentation\\Middleware\\AttachSignatureToRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T01:14:03.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SharedServiceContainer.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "RelativeToolTip": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T09:26:29.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JWTAuthenticationScheme.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
+              "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
+              "RelativeToolTip": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T13:24:08.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "ApiGateway.Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\Program.cs",
+              "RelativeToolTip": "ApiGateway.Presentation\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-18T00:22:04.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\secret_stache\\T3CH5\\Microsoft Visual Studio\\18\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\secret_stache\\T3CH5\\Microsoft Visual Studio\\18\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\secret_stache\\T3CH5\\Microsoft Visual Studio\\18\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\secret_stache\\T3CH5\\Microsoft Visual Studio\\18\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAGMUAAAAAAAAAAAIwAQUAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-11-18T13:55:35.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ECommerceDB/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-18T19:17:47.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.Orders [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ECommerceDB/True/SqlTable/dbo.Orders.sql",
+              "ToolTip": "dbo.Orders [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-11-18T18:54:40.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ApiGateway.Presentation\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ApiGateway.Presentation\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T00:24:10.247Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

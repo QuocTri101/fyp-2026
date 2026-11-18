@@ -15,3 +15,4 @@ C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceF
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\refint\OrderApi.Application.dll
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.Application.pdb
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\ref\OrderApi.Application.dll
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.OrderApi.Solution\OrderApi.Application\obj\Debug\net10.0\OrderApi.Application.sourcelink.json

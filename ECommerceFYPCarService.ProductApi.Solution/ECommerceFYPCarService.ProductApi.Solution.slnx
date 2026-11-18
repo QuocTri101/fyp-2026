@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../ECommerceFYPCarService.SharedLibrary.Solution/eCommerceCar.SharedLibrary/eCommerceCar.SharedLibrary.csproj" />
+  <Project Path="ProductApi.Application/ProductApi.Application.csproj" />
+  <Project Path="ProductApi.Domain/ProductApi.Domain.csproj" />
+  <Project Path="ProductApi.Infrastructure/ProductApi.Infrastructure.csproj" Id="d6344eb6-53b5-4c06-8ba9-e3a62fb7503d" />
+  <Project Path="ProductApi.Presentation/ProductApi.Presentation.csproj" Id="61e1364f-3e75-499d-9d4a-7642d2340e57" />
+</Solution>

@@ -56,7 +56,7 @@ namespace OrderApi.Infrastructure.Repositories
             try
             {
                 var order = await context.Orders!.FindAsync(id);
-                return order is not null? order:null!
+                return order is not null ? order : null!;
             }
             catch (Exception ex)
             {
@@ -67,7 +67,7 @@ namespace OrderApi.Infrastructure.Repositories
                 throw new Exception("Error occured while retrieving order");
             }
         }
-        public Task<IEnumerable<Order>> GetAllAsync()
+        public async Task<IEnumerable<Order>> GetAllAsync()
         {
             try
             {
@@ -83,7 +83,7 @@ namespace OrderApi.Infrastructure.Repositories
                 throw new Exception("Error occured while retrieving orders");
             }
         }
-        public Task<Order> GetByAsync(Expression<Func<Order, bool>> predicate)
+        public async Task<Order> GetByAsync(Expression<Func<Order, bool>> predicate)
         {
             try
             {
@@ -99,7 +99,7 @@ namespace OrderApi.Infrastructure.Repositories
                 throw new Exception("Error occurred while retrieving order");
             }
         }
-        public Task<IEnumerable<Order>> GetOrdersAsync(Expression<Func<Order, bool>> predicate)
+        public async Task<IEnumerable<Order>> GetOrdersAsync(Expression<Func<Order, bool>> predicate)
         {
             try
             {

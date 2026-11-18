@@ -1,6 +1,6 @@
 ﻿using eCommerceCar.SharedLibrary.Logs;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
+using Microsoft.Extensions.DependencyInjection;
 using OrderApi.Application.Services;
 using Polly;
 using Polly.Retry;
@@ -9,14 +9,14 @@ namespace OrderApi.Application.DependancyInjection
 {
     public static class ServiceContainer
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddApplicationService(this IServiceCollection services, IConfiguration config)
         {
             // Register HttpClient service
             // Create Dependency Injection
             services.AddHttpClient<IOrderService, OrderService>(options =>
             {
                 options.BaseAddress = new Uri(config["ApiGateway:BaseAddress"]);
-                options.Timeout = TimeSpan.FromSeconds(1);
+                options.Timeout = TimeSpan.FromSeconds(10);
             });
 
             // Create Retry Strategy

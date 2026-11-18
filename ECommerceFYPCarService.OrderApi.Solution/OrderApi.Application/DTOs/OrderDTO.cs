@@ -8,7 +8,7 @@ namespace OrderApi.Application.DTOs
         int Id,
         [Required, Range(1, int.MaxValue)] int ProductId,
         [Required, Range(1, int.MaxValue)] int ClientId,
-        [Required, Range(1, int.MaxValue)] int PublicQuantity,
-        DateTime OrderData
+        [Required, Range(1, int.MaxValue)] int PurchaseQuantity,
+        DateTime OrderDate
     );
 }

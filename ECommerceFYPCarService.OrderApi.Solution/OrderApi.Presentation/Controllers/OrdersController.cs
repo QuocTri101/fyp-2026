@@ -1,5 +1,5 @@
 ﻿using eCommerceCar.SharedLibrary.Responses;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OrderApi.Application.DTOs;
 using OrderApi.Application.DTOs.Conversions;
@@ -10,6 +10,7 @@ namespace OrderApi.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class OrdersController(IOrder orderInterface, IOrderService orderService) : ControllerBase
     {
         [HttpGet]
@@ -22,11 +23,56 @@ namespace OrderApi.Presentation.Controllers
             return !list!.Any() ? NotFound() : Ok(list);
         }
 
-        [HttpGet]
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<OrderDTO>> GetOrder(int id)
+        {
+            var order = await orderInterface.FindByIdAsync(id);
+            if (order is null)
+                return NotFound(null);
+
+            var(_orderDTO, _) = OrderConversion.FromEntity(order, null);
+            return Ok(order);
+        }
+
+        [HttpGet("client/{clientId:int}")]
+        public async Task<ActionResult<OrderDTO>> GetClientOrders(int clientId)
+        {
+            if (clientId <= 0)
+                return BadRequest("Invalid client ID.");
+            var orders = await orderInterface.GetOrdersAsync(o => o.ClientId == clientId);
+            return !orders.Any() ? NotFound(null) : Ok(orders);
+        }
+
+
+        [HttpPost]
         public async Task<ActionResult<Response>> CreateOrder(OrderDTO orderDTO)
         {
+            //Check model state if all data annotations are valid
             if (!ModelState.IsValid)
                 return BadRequest("Invalid product data.");
+            //Convert to entity
+            var getEntity = OrderConversion.ToEntity(orderDTO);
+            var response = await orderInterface.CreateAsync(getEntity);
+            return response.Flag ? Ok(response) : BadRequest(response);
         }
+
+        [HttpPut]
+        public async Task<ActionResult<Response>> UpdateOrder(OrderDTO orderDTO)
+        {
+            //Convert DTO to entity
+            var order = OrderConversion.ToEntity(orderDTO);
+            var response = await orderInterface.UpdateAsync(order);
+            return response.Flag ? Ok(response) : BadRequest(response);
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult<Response>> DeleteOrder(OrderDTO orderDTO)
+        {
+            //Convert DTO to entity
+            var order = OrderConversion.ToEntity(orderDTO);
+            var response = await orderInterface.DeleteAsync(order);
+            return response.Flag ? Ok(response) : BadRequest(response);
+        }
+
     }
 }

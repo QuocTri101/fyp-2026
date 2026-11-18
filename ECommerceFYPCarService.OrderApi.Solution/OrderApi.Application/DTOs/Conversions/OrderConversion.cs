@@ -19,14 +19,14 @@ namespace OrderApi.Application.DTOs.Conversions
         public static (OrderDTO?, IEnumerable<OrderDTO>?) FromEntity(Order? order, IEnumerable<Order>? orders)
         {
             //return single
-            if order is not null || orders is null
+            if (order is not null || orders is null)
             {
                 var singleOrder = new OrderDTO(
                     order!.Id,
                     order.ClientId,
                     order.ProductId,
-                    order.OrderDate,
-                    order.PurchaseQuantity);
+                    order.PurchaseQuantity,
+                    order.OrderDate);
                 return (singleOrder, null);
             }
             //return list
@@ -37,10 +37,11 @@ namespace OrderApi.Application.DTOs.Conversions
                     o.Id,
                     o.ClientId,
                     o.ProductId,
-                    o.OrderDate,
-                    o.PurchaseQuantity));
+                    o.PurchaseQuantity,
+                    o.OrderDate));
                 return (null,_orders);
             }
+            return (null, null);
         }
     }
 }

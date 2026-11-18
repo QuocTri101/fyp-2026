@@ -1,5 +1,6 @@
 ﻿using Microsoft.Identity.Client;
 using OrderApi.Application.DTOs;
+using OrderApi.Application.DTOs.Conversions;
 using OrderApi.Application.Interfaces;
 using Polly;
 using Polly.Registry;
@@ -16,7 +17,7 @@ namespace OrderApi.Application.Services
             //Redirect this call to the API gateway, not response to outsider
             var getProduct = await httpClient.GetAsync($"/api/products/{productId}");
             if (!getProduct.IsSuccessStatusCode)
-                return null;
+                return null!;
             var product = await getProduct.Content.ReadFromJsonAsync<ProductDTO>();
             return product!;
         }
@@ -26,19 +27,19 @@ namespace OrderApi.Application.Services
         {
             //Call User Api using Http Client
             //Redirect this call to the API gateway, not response to outsider
-            var getUser = await httpClient.GetAsync($"/api/products/{userId}");
+            var getUser = await httpClient.GetAsync($"/api/authenticatiom/{userId}");
             if (!getUser.IsSuccessStatusCode)
-                return null;
+                return null!;
             var product = await getUser.Content.ReadFromJsonAsync<AppUserDTO>();
             return product!;
         }
         //Get Order Details
-        public async Task<OrderDetailDTO> GetOrderDetails(int orderId)
+        public async Task<OrderDetailsDTO> GetOrderDetails(int orderId)
         {
             //Prepare Order
             var order = await orderInterface.FindByIdAsync(orderId);
             if (order is null || order!.Id <=0)
-                return null;
+                return null!;
             //Get Retry pipeline
             var retryPipeline = resiliencePipeline.GetPipeline("my-retry-pipeline");
 
@@ -48,7 +49,7 @@ namespace OrderApi.Application.Services
             //Prepare Client
             var appUserDTO = await retryPipeline.ExecuteAsync(async token => await GetUser(order.ClientId));
             //Populate Order Details
-            return new OrderDetailDTO(
+            return new OrderDetailsDTO(
                 order.Id,
                 productDTO.Id,
                 appUserDTO.Id,
@@ -64,24 +65,16 @@ namespace OrderApi.Application.Services
             );
         }
 
-        //Get Orders by Client Id
+        //Get Order Detail by Id
         public async Task<IEnumerable<OrderDTO>> GetOrdersByClientId(int clientId)
         {
             //Get all Client Orders
-            var orders = await orderInterface.GetOrdersByClientId(o => o.ClientId == clientId);
+            var orders = await orderInterface.GetOrdersAsync(o => o.ClientId == clientId);
             if (!orders.Any())
                 return null!;
             //Convert to DTO
             var (_, _orders) = OrderConversion.FromEntity(null, orders);
             return _orders!;
-        }
-        public Task<OrderDetailDTO> GetOrderDetails(int orderId)
-        {
-            throw new NotImplementedException();
-        }
-        public Task<IEnumerable<OrderDTO>> GetOrdersByClientIdAsync(int clientId)
-        {
-            throw new NotImplementedException();
         }
     }
 }
