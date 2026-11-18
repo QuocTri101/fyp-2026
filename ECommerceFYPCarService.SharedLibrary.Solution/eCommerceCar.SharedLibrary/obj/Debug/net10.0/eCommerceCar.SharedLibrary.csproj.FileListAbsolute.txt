@@ -18,8 +18,8 @@ C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceF
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.SharedLibrary.Solution\eCommerceCar.SharedLibrary\obj\Debug\net10.0\eCommerceCar.SharedLibrary.AssemblyInfoInputs.cache
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.SharedLibrary.Solution\eCommerceCar.SharedLibrary\obj\Debug\net10.0\eCommerceCar.SharedLibrary.AssemblyInfo.cs
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.SharedLibrary.Solution\eCommerceCar.SharedLibrary\obj\Debug\net10.0\eCommerceCar.SharedLibrary.csproj.CoreCompileInputs.cache
+C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.SharedLibrary.Solution\eCommerceCar.SharedLibrary\obj\Debug\net10.0\eCommerceCar.SharedLibrary.sourcelink.json
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.SharedLibrary.Solution\eCommerceCar.SharedLibrary\obj\Debug\net10.0\eCommerceCar.SharedLibrary.dll
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.SharedLibrary.Solution\eCommerceCar.SharedLibrary\obj\Debug\net10.0\refint\eCommerceCar.SharedLibrary.dll
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.SharedLibrary.Solution\eCommerceCar.SharedLibrary\obj\Debug\net10.0\eCommerceCar.SharedLibrary.pdb
 C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.SharedLibrary.Solution\eCommerceCar.SharedLibrary\obj\Debug\net10.0\ref\eCommerceCar.SharedLibrary.dll
-C:\Users\TriQ\source\repos\ECommerceFYPCarService.MicroserviceProject\ECommerceFYPCarService.SharedLibrary.Solution\eCommerceCar.SharedLibrary\obj\Debug\net10.0\eCommerc.B67AF8EE.Up2Date
