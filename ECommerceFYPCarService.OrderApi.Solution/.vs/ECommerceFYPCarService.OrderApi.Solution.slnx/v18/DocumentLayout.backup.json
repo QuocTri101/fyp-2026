@@ -83,6 +83,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.orderapi.solution\\orderapi.infrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D7A29EF-F109-BE97-8E42-F043FE4B87E8}|OrderApi.Infrastructure\\OrderApi.Infrastructure.csproj|solutionrelative:orderapi.infrastructure\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -154,9 +157,22 @@
               "RelativeDocumentMoniker": "OrderApi.Presentation\\Controllers\\OrdersController.cs",
               "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.OrderApi.Solution\\OrderApi.Presentation\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "OrderApi.Presentation\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-05T17:32:33.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "RelativeToolTip": "..\\ECommerceFYPCarService.ApiGateway.Solution\\ApiGateway.Presentation\\ocelot.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwJMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-18T20:26:00.291Z",
               "EditorCaption": ""
             },
             {
