@@ -5,7 +5,9 @@ namespace eCommerceCar.SharedLibrary.Middleware
     {
         public async Task InvokeAsync(HttpContext context)
         {
+            //extract specific header from request
             var signedHeader = context.Request.Headers["Api-Gateway"];
+            //null means, the request is not coming from the api gateway// 503 service un
             if(signedHeader.FirstOrDefault() is null)
             {
                 context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;

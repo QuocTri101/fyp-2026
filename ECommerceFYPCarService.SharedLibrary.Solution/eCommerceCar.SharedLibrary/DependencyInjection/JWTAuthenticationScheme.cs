@@ -10,7 +10,7 @@ namespace eCommerceCar.SharedLibrary.DependencyInjection
 {
     public static class JWTAuthenticationScheme
     {
-        public static IServiceCollection AddWTAuthenticationScheme(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddJWTAuthenticationScheme(this IServiceCollection services, IConfiguration config)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer("Bearer", options =>

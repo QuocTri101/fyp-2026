@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using eCommerceCar.SharedLibrary.Middleware;
+using eCommerceCar.SharedLibrary.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -13,11 +12,12 @@ namespace eCommerceCar.SharedLibrary.DependencyInjection
         public static IServiceCollection AddSharedServices<TContext>
             (this IServiceCollection services, IConfiguration config, string fileName) where TContext: DbContext
         {
+            //Add generic db context
             services.AddDbContext<TContext>(option => option.UseSqlServer(
                 config
                 .GetConnectionString("eCommerceConnection"), sqlserverOption =>
                 sqlserverOption.EnableRetryOnFailure()));
-
+            //config serilog logging
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .WriteTo.Debug()
@@ -27,8 +27,8 @@ namespace eCommerceCar.SharedLibrary.DependencyInjection
                 outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {message:lj}{NewLine}{Exception}",
                 rollingInterval: RollingInterval.Day)
                 .CreateLogger();
-
-            JWTAuthenticationScheme.AddWTAuthenticationScheme(services, config);
+            //add JWT authentication scheme
+            JWTAuthenticationScheme.AddJWTAuthenticationScheme(services, config);
             return services;
         }
 
@@ -40,46 +40,4 @@ namespace eCommerceCar.SharedLibrary.DependencyInjection
         }
     }
 }
-=======
-﻿using eCommerceCar.SharedLibrary.Middleware;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Serilog;
 
-namespace eCommerceCar.SharedLibrary.DependencyInjection
-{
-    public static class SharedServiceContainer
-    {
-        public static IServiceCollection AddSharedServices<TContext>
-            (this IServiceCollection services, IConfiguration config, string fileName) where TContext: DbContext
-        {
-            services.AddDbContext<TContext>(option => option.UseSqlServer(
-                config
-                .GetConnectionString("eCommerceConnection"), sqlserverOption =>
-                sqlserverOption.EnableRetryOnFailure()));
-
-            Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Information()
-                .WriteTo.Debug()
-                .WriteTo.Console()
-                .WriteTo.File(path: $"{fileName}-.text",
-                restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
-                outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {message:lj}{NewLine}{Exception}",
-                rollingInterval: RollingInterval.Day)
-                .CreateLogger();
-
-            JWTAuthenticationScheme.AddWTAuthenticationScheme(services, config);
-            return services;
-        }
-
-        public static IApplicationBuilder UseSharedPolicies(this IApplicationBuilder app)
-        {
-            app.UseMiddleware<GlobalException>();
-            app.UseMiddleware<ListenToOnlyApiGateway>();
-            return app;
-        }
-    }
-}
->>>>>>> c566238fa3d22beb6ec6a5e4fa0e1c088c655a4f

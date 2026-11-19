@@ -17,14 +17,15 @@ namespace eCommerceCar.SharedLibrary.Middleware
             try
             {
                 await next(context);
-                if(context.Response.StatusCode == StatusCodes.Status429TooManyRequests)
+                //check if exception is too many request 429 
+                if (context.Response.StatusCode == StatusCodes.Status429TooManyRequests)
                 {
                     title = "Warning";
                     message = "Too many request made.";
                     statusCode = (int)StatusCodes.Status429TooManyRequests;
                     await ModifyHeader(context, title, message, statusCode);
                 }
-
+                //if response is unauthorized 401
                 if(context.Response.StatusCode == StatusCodes.Status401Unauthorized)
                 {
                     title = "Alert";
@@ -41,20 +42,24 @@ namespace eCommerceCar.SharedLibrary.Middleware
                 }
             }catch(Exception ex)
             {
+                //log og exceptions / file, debugger, console
                 LogException.LogExceptions(ex);
+                //check if exception is timeout 408 request timeout
                 if(ex is TaskCanceledException || ex is TimeoutException)
                 {
                     title = "Out of Time";
                     message = "Request timeout ... try again";
                     statusCode = StatusCodes.Status408RequestTimeout;
                 }
-
+                //if exception is caught
+                //if none of of the exceptions then do the default
                 await ModifyHeader(context, title, message, statusCode);
             }
         }
 
         private static async Task ModifyHeader(HttpContext context, string title, string message, int statusCode)
         {
+            //display scary-free message to client
             context.Response.ContentType = "application/json";
             await context.Response.WriteAsync(JsonSerializer.Serialize(new ProblemDetails()
             {
