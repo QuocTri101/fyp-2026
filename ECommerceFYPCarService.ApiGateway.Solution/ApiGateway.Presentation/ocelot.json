@@ -138,7 +138,7 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5003"
+    "BaseAddress": "https://localhost:5003"
     //"RateLimitOptions": {
     //  "QuotaExceededMessage": "You are overwhelming me with multiple requests. Relax more, bruh"
     //}

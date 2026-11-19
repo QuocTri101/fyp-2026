@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6B82A430-7219-D8F2-52F5-2A50A08D4A3A}|..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\eCommerceCar.SharedLibrary.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.sharedlibrary.solution\\ecommercecar.sharedlibrary\\middleware\\globalexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AFDC4D1C-EA0A-2B24-4EA6-407D6A80CEAE}|AuthApi.Presentation\\AuthApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.authapi.solution\\authapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{AFDC4D1C-EA0A-2B24-4EA6-407D6A80CEAE}|AuthApi.Presentation\\AuthApi.Presentation.csproj|solutionrelative:authapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -73,7 +76,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,7 +92,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "GlobalException.cs",
+              "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\GlobalException.cs",
+              "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\GlobalException.cs",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\GlobalException.cs",
+              "RelativeToolTip": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\GlobalException.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-19T07:46:03.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Presentation\\Program.cs",
               "RelativeDocumentMoniker": "AuthApi.Presentation\\Program.cs",
@@ -101,20 +117,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Presentation\\appsettings.json",
               "RelativeDocumentMoniker": "AuthApi.Presentation\\appsettings.json",
               "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Presentation\\appsettings.json",
               "RelativeToolTip": "AuthApi.Presentation\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-11-13T06:23:08.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Presentation\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AuthApi.Presentation\\Properties\\launchSettings.json",
@@ -127,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Presentation\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "AuthApi.Presentation\\Controllers\\AuthController.cs",
@@ -139,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AuthApi-20261119.text",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Presentation\\AuthApi-20261119.text",
               "RelativeDocumentMoniker": "AuthApi.Presentation\\AuthApi-20261119.text",
@@ -151,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "AuthApi.Infrastructure\\Repositories\\UserRepository.cs",
@@ -163,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Application\\DTOs\\LoginDTO.cs",
               "RelativeDocumentMoniker": "AuthApi.Application\\DTOs\\LoginDTO.cs",
@@ -175,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ServiceContainer.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Infrastructure\\DependencyInjection\\ServiceContainer.cs",
               "RelativeDocumentMoniker": "AuthApi.Infrastructure\\DependencyInjection\\ServiceContainer.cs",
@@ -187,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SharedServiceContainer.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
               "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
@@ -199,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "20261113073212_First.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Infrastructure\\Data\\Migrations\\20261113073212_First.cs",
               "RelativeDocumentMoniker": "AuthApi.Infrastructure\\Data\\Migrations\\20261113073212_First.cs",
@@ -211,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "GetUserDTO.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Application\\DTOs\\GetUserDTO.cs",
               "RelativeDocumentMoniker": "AuthApi.Application\\DTOs\\GetUserDTO.cs",
@@ -223,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "AuthDbContext.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Infrastructure\\Data\\AuthDbContext.cs",
               "RelativeDocumentMoniker": "AuthApi.Infrastructure\\Data\\AuthDbContext.cs",
@@ -235,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "IUser.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Application\\DTOs\\Interface\\IUser.cs",
               "RelativeDocumentMoniker": "AuthApi.Application\\DTOs\\Interface\\IUser.cs",
@@ -247,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AppUserDTO.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Application\\DTOs\\AppUserDTO.cs",
               "RelativeDocumentMoniker": "AuthApi.Application\\DTOs\\AppUserDTO.cs",
@@ -259,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Domain\\Entities\\AppUser.cs",
               "RelativeDocumentMoniker": "AuthApi.Domain\\Entities\\AppUser.cs",
@@ -271,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "AuthApi.Application.csproj",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.AuthApi.Solution\\AuthApi.Application\\AuthApi.Application.csproj",
               "RelativeDocumentMoniker": "AuthApi.Application\\AuthApi.Application.csproj",

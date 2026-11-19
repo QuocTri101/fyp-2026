@@ -59,6 +59,8 @@ namespace eCommerceCar.SharedLibrary.Middleware
 
         private static async Task ModifyHeader(HttpContext context, string title, string message, int statusCode)
         {
+            //in case of error 500 and others
+            context.Response.StatusCode = statusCode;
             //display scary-free message to client
             context.Response.ContentType = "application/json";
             await context.Response.WriteAsync(JsonSerializer.Serialize(new ProblemDetails()

@@ -26,7 +26,7 @@ namespace OrderApi.Application.DependancyInjection
                 BackoffType = DelayBackoffType.Constant,
                 UseJitter = true,
                 MaxRetryAttempts = 3,
-                Delay = TimeSpan.FromSeconds(500),
+                Delay = TimeSpan.FromMilliseconds(500),
                 OnRetry = args =>
                 {
                     string message = $"OnRetry, Attempt:{args.AttemptNumber} Outcome {args.Outcome}";
