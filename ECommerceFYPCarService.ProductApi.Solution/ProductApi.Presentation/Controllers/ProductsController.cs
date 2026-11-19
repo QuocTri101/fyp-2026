@@ -10,7 +10,7 @@ namespace ProductApi.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[AllowAnonymous]
+    [AllowAnonymous]
     public class ProductsController(IProduct productInterface) : ControllerBase
     {
         [HttpGet]

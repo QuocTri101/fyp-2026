@@ -15,7 +15,7 @@
       "RateLimitOptions": {
         "ClientWhitelist": [],
         "EnableRateLimiting": false
-        //"Period": "60s",
+        //"Period": "10s",
         //"Limit": 1,
         //"PeriodTimespan": 10
       }
@@ -138,9 +138,9 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5003",
-    "RateLimitOptions": {
-      "QuotaExceededMessage": "You are overwhelming me with multiple requests. Relax more, bruh"
-    }
+    "BaseUrl": "https://localhost:5003"
+    //"RateLimitOptions": {
+    //  "QuotaExceededMessage": "You are overwhelming me with multiple requests. Relax more, bruh"
+    //}
   }
 }
