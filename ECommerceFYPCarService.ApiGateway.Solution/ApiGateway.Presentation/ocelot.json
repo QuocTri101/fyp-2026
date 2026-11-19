@@ -137,12 +137,10 @@
       }
     }
   ],
-  "GlobalConfiguration": {},
-  "BaseUrl": "https://localhost:5003",
-  "RateLimitOptions": {
- curl -X POST http://localhost:5000/api/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"username":"test","password":"test"}' \
-  -v   "QuotaExceededMessage": "You are overwhelming me with multiple requests. Relax more, bruh"
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5003",
+    "RateLimitOptions": {
+      "QuotaExceededMessage": "You are overwhelming me with multiple requests. Relax more, bruh"
+    }
   }
 }
