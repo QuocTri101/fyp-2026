@@ -1,11 +1,13 @@
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { useAuth } from '../features/auth/AuthContext'
+import { Roles, hasRole } from '../features/auth/roles'
 
 const navLink = ({ isActive }: { isActive: boolean }) =>
   `text-sm font-medium ${isActive ? 'text-blue-700' : 'text-slate-600 hover:text-slate-900'}`
 
 export default function Layout() {
   const { user, logout } = useAuth()
+  const isAdmin = !!user && hasRole(user.role, [Roles.Admin])
 
   return (
     <div className="min-h-screen">
@@ -19,7 +21,19 @@ export default function Layout() {
               <NavLink to="/" end className={navLink}>
                 Home
               </NavLink>
-              {/* Next steps: Services, My bookings, Admin */}
+              <NavLink to="/services" className={navLink}>
+                Services
+              </NavLink>
+              {isAdmin && (
+                <NavLink to="/admin/services" className={navLink}>
+                  Manage services
+                </NavLink>
+              )}
+              {user && (
+                <NavLink to="/orders" className={navLink}>
+                  {isAdmin ? 'All orders' : 'My orders'}
+                </NavLink>
+              )}
             </nav>
           </div>
 

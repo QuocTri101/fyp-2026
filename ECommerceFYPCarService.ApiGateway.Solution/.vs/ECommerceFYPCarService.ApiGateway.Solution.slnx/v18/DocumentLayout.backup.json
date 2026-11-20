@@ -73,7 +73,7 @@
               "RelativeDocumentMoniker": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\GlobalException.cs",
               "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\GlobalException.cs",
               "RelativeToolTip": "..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\Middleware\\GlobalException.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwEAAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwDcAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-19T07:44:35.469Z",
               "EditorCaption": ""
@@ -181,9 +181,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "dbo.Users.sql",
+              "Title": "dbo.Users [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ECommerceDB/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/ECommerceDB/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2026-11-18T19:17:47.96Z"
             },

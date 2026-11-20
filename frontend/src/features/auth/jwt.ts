@@ -1,4 +1,6 @@
 export interface TokenUser {
+  /** Database user id (the NameIdentifier claim), or null for tokens issued before it existed. */
+  id: number | null
   name: string
   email: string
   role: string
@@ -9,6 +11,7 @@ export interface TokenUser {
 // ASP.NET may write claims with short names or with the long schema URIs.
 const NAME_KEYS = ['unique_name', 'name', 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name']
 const EMAIL_KEYS = ['email', 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress']
+const ID_KEYS = ['nameid', 'sub', 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier']
 const ROLE_KEYS = ['role', 'http://schemas.microsoft.com/ws/2008/06/identity/claims/role']
 
 function decodeBase64Url(segment: string): string {
@@ -31,7 +34,9 @@ function pick(payload: Record<string, unknown>, keys: string[]): string {
 export function parseToken(token: string): TokenUser | null {
   try {
     const payload = JSON.parse(decodeBase64Url(token.split('.')[1])) as Record<string, unknown>
+    const rawId = pick(payload, ID_KEYS)
     return {
+      id: /^\d+$/.test(rawId) ? Number(rawId) : null,
       name: pick(payload, NAME_KEYS),
       email: pick(payload, EMAIL_KEYS),
       role: pick(payload, ROLE_KEYS),

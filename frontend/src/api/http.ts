@@ -23,8 +23,13 @@ export function onUnauthorized(handler: () => void): void {
 
 type Method = 'GET' | 'POST' | 'PUT' | 'DELETE'
 
-async function request<T>(method: Method, path: string, body?: unknown): Promise<T> {
-  const headers: Record<string, string> = {}
+async function request<T>(
+  method: Method,
+  path: string,
+  body?: unknown,
+  extraHeaders?: Record<string, string>,
+): Promise<T> {
+  const headers: Record<string, string> = { ...extraHeaders }
   if (body !== undefined) headers['Content-Type'] = 'application/json'
 
   const token = tokenStorage.get()
@@ -86,7 +91,8 @@ function errorMessage(status: number, data: unknown): string {
 }
 
 export const http = {
-  get: <T>(path: string) => request<T>('GET', path),
+  get: <T>(path: string, headers?: Record<string, string>) =>
+    request<T>('GET', path, undefined, headers),
   post: <T>(path: string, body?: unknown) => request<T>('POST', path, body),
   put: <T>(path: string, body?: unknown) => request<T>('PUT', path, body),
   delete: <T>(path: string, body?: unknown) => request<T>('DELETE', path, body),

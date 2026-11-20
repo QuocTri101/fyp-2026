@@ -29,7 +29,8 @@ export default function LoginPage() {
     setLoading(true)
     try {
       await login(email, password)
-      navigate(state?.from?.pathname ?? '/', { replace: true })
+      const from = state?.from
+      navigate(from ? `${from.pathname}${from.search}` : '/', { replace: true })
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Login failed.')
     } finally {

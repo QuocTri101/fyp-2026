@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ProductApi.Solution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{61E1364F-3E75-499D-9D4A-7642D2340E57}|ProductApi.Presentation\\ProductApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.productapi.solution\\productapi.presentation\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61E1364F-3E75-499D-9D4A-7642D2340E57}|ProductApi.Presentation\\ProductApi.Presentation.csproj|solutionrelative:productapi.presentation\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{61E1364F-3E75-499D-9D4A-7642D2340E57}|ProductApi.Presentation\\ProductApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.productapi.solution\\productapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{61E1364F-3E75-499D-9D4A-7642D2340E57}|ProductApi.Presentation\\ProductApi.Presentation.csproj|solutionrelative:productapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61E1364F-3E75-499D-9D4A-7642D2340E57}|ProductApi.Presentation\\ProductApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.productapi.solution\\productapi.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{61E1364F-3E75-499D-9D4A-7642D2340E57}|ProductApi.Presentation\\ProductApi.Presentation.csproj|solutionrelative:productapi.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61E1364F-3E75-499D-9D4A-7642D2340E57}|ProductApi.Presentation\\ProductApi.Presentation.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.productapi.solution\\productapi.presentation\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61E1364F-3E75-499D-9D4A-7642D2340E57}|ProductApi.Presentation\\ProductApi.Presentation.csproj|solutionrelative:productapi.presentation\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B82A430-7219-D8F2-52F5-2A50A08D4A3A}|..\\ECommerceFYPCarService.SharedLibrary.Solution\\eCommerceCar.SharedLibrary\\eCommerceCar.SharedLibrary.csproj|c:\\users\\triq\\source\\repos\\ecommercefypcarservice.microserviceproject\\ecommercefypcarservice.sharedlibrary.solution\\ecommercecar.sharedlibrary\\dependencyinjection\\sharedservicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -65,7 +65,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -93,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ProductApi.Solution\\ProductApi.Presentation\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "ProductApi.Presentation\\Properties\\launchSettings.json",
@@ -106,12 +106,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ProductApi.Solution\\ProductApi.Presentation\\appsettings.json",
               "RelativeDocumentMoniker": "ProductApi.Presentation\\appsettings.json",
-              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ProductApi.Solution\\ProductApi.Presentation\\appsettings.json*",
-              "RelativeToolTip": "ProductApi.Presentation\\appsettings.json*",
+              "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ProductApi.Solution\\ProductApi.Presentation\\appsettings.json",
+              "RelativeToolTip": "ProductApi.Presentation\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-11-13T00:37:53.806Z",
@@ -119,13 +119,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ProductApi.Solution\\ProductApi.Presentation\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "ProductApi.Presentation\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\TriQ\\source\\repos\\ECommerceFYPCarService.MicroserviceProject\\ECommerceFYPCarService.ProductApi.Solution\\ProductApi.Presentation\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "ProductApi.Presentation\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwAwAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-12T23:57:54.891Z",
               "EditorCaption": ""
