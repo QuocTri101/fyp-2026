@@ -1,7 +1,0 @@
-<Solution>
-  <Project Path="../ECommerceFYPCarService.SharedLibrary.Solution/eCommerceCar.SharedLibrary/eCommerceCar.SharedLibrary.csproj" />
-  <Project Path="InvoiceApi.Application/InvoiceApi.Application.csproj" />
-  <Project Path="InvoiceApi.Domain/InvoiceApi.Domain.csproj" />
-  <Project Path="InvoiceApi.Infrastructure/InvoiceApi.Infrastructure.csproj" />
-  <Project Path="InvoiceApi.Presentation/InvoiceApi.Presentation.csproj" />
-</Solution>

@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  /* Visible keyboard focus on light and dark surfaces: ink outline plus a yellow halo. */
+  :focus-visible {
+    outline: 2px solid #14202b;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px rgb(242 194 0 / 0.9);
+  }
+}
+
+@layer components {
+  /* Road-works stripe. The only decorative device on the site. */
+  .hazard {
+    background: repeating-linear-gradient(-45deg, #f2c200 0 10px, #14202b 10px 20px);
+  }
+
+  /* Order numbers, styled like a licence plate. */
+  .plate {
+    @apply inline-block rounded border-2 border-ink bg-white px-2 py-0.5 font-display text-base font-semibold leading-tight tabular-nums text-ink;
+  }
+
+  /* The one animated moment: price board rows slide in once, in order. */
+  .board-row {
+    animation: board-row 0.45s ease-out both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+}
+
+@keyframes board-row {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .board-row {
+    animation: none;
+  }
+}

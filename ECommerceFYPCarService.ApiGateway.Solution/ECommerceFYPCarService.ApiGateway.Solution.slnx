@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="../ECommerceFYPCarService.SharedLibrary.Solution/eCommerceCar.SharedLibrary/eCommerceCar.SharedLibrary.csproj" />
-  <Project Path="ApiGateway.Presentation/ApiGateway.Presentation.csproj" />
-</Solution>

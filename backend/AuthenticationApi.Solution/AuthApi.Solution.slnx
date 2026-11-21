@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../SharedLibrary.Solution/SharedLibrary/SharedLibrary.csproj" />
+  <Project Path="AuthApi.Application/AuthApi.Application.csproj" />
+  <Project Path="AuthApi.Domain/AuthApi.Domain.csproj" />
+  <Project Path="AuthApi.Infrastructure/AuthApi.Infrastructure.csproj" />
+  <Project Path="AuthApi.Presentation/AuthApi.Presentation.csproj" />
+</Solution>
