@@ -90,9 +90,29 @@ function errorMessage(status: number, data: unknown): string {
   return `Request failed (${status}).`
 }
 
+/** GET a file (an invoice PDF, say) with the sign-in token attached. */
+async function requestBlob(path: string): Promise<Blob> {
+  const headers: Record<string, string> = {}
+  const token = tokenStorage.get()
+  if (token) headers.Authorization = `Bearer ${token}`
+
+  let res: Response
+  try {
+    res = await fetch(`${BASE_URL}${path}`, { headers })
+  } catch {
+    throw new ApiError(0, 'Cannot reach the server. Is the API gateway running?')
+  }
+  if (!res.ok) {
+    if (res.status === 401 && token) unauthorizedHandler?.()
+    throw new ApiError(res.status, errorMessage(res.status, undefined))
+  }
+  return res.blob()
+}
+
 export const http = {
   get: <T>(path: string, headers?: Record<string, string>) =>
     request<T>('GET', path, undefined, headers),
+  getBlob: requestBlob,
   post: <T>(path: string, body?: unknown) => request<T>('POST', path, body),
   put: <T>(path: string, body?: unknown) => request<T>('PUT', path, body),
   delete: <T>(path: string, body?: unknown) => request<T>('DELETE', path, body),

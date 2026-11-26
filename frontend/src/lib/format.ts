@@ -29,3 +29,13 @@ export function initials(text: string): string {
   const letters = parts.length > 1 ? parts[0][0] + parts[parts.length - 1][0] : (parts[0] ?? '?')[0]
   return letters.toUpperCase()
 }
+
+/** ABCD1234 -> ABCD-1234, easier to read out loud. */
+export function formatPickupCode(code: string): string {
+  return code.length === 8 ? `${code.slice(0, 4)}-${code.slice(4)}` : code
+}
+
+/** What a person or scanner might type: any case, spaces, dashes. */
+export function normalizeCode(raw: string): string {
+  return raw.replace(/[^a-zA-Z0-9]/g, '').toUpperCase()
+}

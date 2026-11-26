@@ -12,7 +12,14 @@ export interface Order {
   clientId: number
   purchaseQuantity: number
   orderDate: string
+  /** The text inside the customer's QR code. Set by the server. */
+  pickupCode: string | null
+  status: OrderStatus
+  redeemedAt: string | null
 }
+
+/** Confirmed: placed online, service not received yet. Redeemed: staff scanned the QR code. */
+export type OrderStatus = 'Confirmed' | 'Redeemed'
 
 /** What the user chooses. The id, client and date are filled in by this module. */
 export interface OrderInput {
@@ -46,6 +53,19 @@ export const ordersApi = {
 
   /** One customer's orders. */
   listForClient: (clientId: number) => getList(`${BASE}/client/${clientId}`),
+
+  /** Staff: what does this QR code belong to? Null when no order has it. */
+  async findByCode(code: string): Promise<Order | null> {
+    try {
+      return await http.get<Order>(`${BASE}/code/${encodeURIComponent(code)}`, cache.headers())
+    } catch (err) {
+      if (err instanceof ApiError && (err.status === 404 || err.status === 400)) return null
+      throw err
+    }
+  },
+
+  /** Staff: the customer got their service. Works once per code. */
+  redeem: (code: string) => expectSuccess(http.post<ApiResponse>(`${BASE}/redeem`, { code })),
 
   create: (clientId: number, input: OrderInput) =>
     expectSuccess(

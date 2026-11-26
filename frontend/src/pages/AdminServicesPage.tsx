@@ -3,6 +3,7 @@ import { servicesApi } from '../api/services'
 import type { Service, ServiceInput } from '../api/services'
 import Alert from '../components/Alert'
 import Button from '../components/Button'
+import Barcode from '../components/Barcode'
 import ConfirmDialog from '../components/ConfirmDialog'
 import Modal from '../components/Modal'
 import PageHeader from '../components/PageHeader'
@@ -71,12 +72,13 @@ export default function AdminServicesPage() {
         )
       ) : (
         <div className="overflow-x-auto rounded-xl border border-line bg-white">
-          <table className="w-full min-w-[32rem] text-left text-sm">
+          <table className="w-full min-w-[40rem] text-left text-sm">
             <thead className="border-b border-line bg-chrome/60 text-steel">
               <tr>
                 <th scope="col" className="px-4 py-3 font-semibold">Service</th>
                 <th scope="col" className="px-4 py-3 text-right font-semibold">Price</th>
                 <th scope="col" className="px-4 py-3 text-right font-semibold">Available</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Barcode</th>
                 <th scope="col" className="px-4 py-3"><span className="sr-only">Actions</span></th>
               </tr>
             </thead>
@@ -86,6 +88,9 @@ export default function AdminServicesPage() {
                   <td className="px-4 py-3 font-semibold">{s.name}</td>
                   <td className="px-4 py-3 text-right tabular-nums">{formatPrice(s.price)}</td>
                   <td className={`px-4 py-3 text-right tabular-nums ${s.quantity <= 0 ? 'text-bad' : ''}`}>{s.quantity}</td>
+                  <td className="px-4 py-3">
+                    {s.barcode ? <Barcode code={s.barcode} className="w-32" /> : <span className="text-steel">Not set. Save the service to create one.</span>}
+                  </td>
                   <td className="px-4 py-3">
                     <div className="flex justify-end gap-2">
                       <Button variant="secondary" size="sm" onClick={() => openEdit(s)}>Edit</Button>

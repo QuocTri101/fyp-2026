@@ -1,4 +1,5 @@
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import { notificationsApi } from '../api/notifications'
 import { ordersApi } from '../api/orders'
 import type { OrderInput } from '../api/orders'
 import Alert from '../components/Alert'
@@ -17,12 +18,23 @@ export default function NewOrderPage() {
   async function handleSubmit(input: OrderInput) {
     if (user?.id == null) throw new Error('Your session has no user id. Please log out and log in again.')
     await ordersApi.create(user.id, input)
-    navigate('/orders', { state: { notice: 'Order placed.' } })
+
+    // The order is placed. Emailing the QR code is a bonus, so a failure here must not look like
+    // a failed order. (The API answers "order placed" without the new id, so the newest order is used.)
+    let notice = 'Order placed.'
+    try {
+      const mine = await ordersApi.listForClient(user.id)
+      const newest = mine.reduce((a, b) => (b.id > a.id ? b : a))
+      notice = `Order placed. ${await notificationsApi.sendOrderConfirmation(newest.id)}`
+    } catch {
+      notice = 'Order placed. The confirmation email could not be sent. You can send it again from the QR code in My orders.'
+    }
+    navigate('/orders', { state: { notice } })
   }
 
   return (
     <>
-      <PageHeader title="New order" description="Choose a service and a quantity." />
+      <PageHeader title="New order" description="Choose a service and a quantity. We email you a QR code to show on the day." />
       <div className="max-w-xl rounded-xl border border-line bg-white p-6">
         {error && <Alert kind="error">{error}</Alert>}
         {loading ? (

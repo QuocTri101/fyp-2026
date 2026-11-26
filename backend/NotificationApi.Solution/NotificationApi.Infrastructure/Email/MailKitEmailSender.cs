@@ -1,3 +1,4 @@
+using MailKit;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Options;
@@ -37,9 +38,9 @@ namespace NotificationApi.Infrastructure.Email
                 smtp.UseStartTls ? SecureSocketOptions.StartTls : SecureSocketOptions.None, ct);
 
             if (!string.IsNullOrEmpty(smtp.User))
-                await client.AuthenticateAsync(smtp.User, smtp.Password, ct);
+                await client.AuthenticateAsync(smtp.User, smtp.Password ?? string.Empty, ct);
 
-            await client.SendAsync(mime, ct);
+            await client.SendAsync(new SendRequest(mime), ct);
             await client.DisconnectAsync(true, ct);
         }
     }

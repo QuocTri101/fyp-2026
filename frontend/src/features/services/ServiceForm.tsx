@@ -15,6 +15,7 @@ export default function ServiceForm({ initial, onSubmit, onCancel }: ServiceForm
   const [name, setName] = useState(initial?.name ?? '')
   const [price, setPrice] = useState(initial ? String(initial.price) : '')
   const [quantity, setQuantity] = useState(initial ? String(initial.quantity) : '')
+  const [barcode, setBarcode] = useState(initial?.barcode ?? '')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -26,10 +27,12 @@ export default function ServiceForm({ initial, onSubmit, onCancel }: ServiceForm
     if (!name.trim()) return setError('Enter a service name.')
     if (!Number.isFinite(priceNum) || priceNum <= 0) return setError('Price must be greater than 0.')
     if (!Number.isInteger(qtyNum) || qtyNum < 0) return setError('Availability must be a whole number, 0 or more.')
+    const code = barcode.replace(/\s/g, '')
+    if (code && !/^\d{8,14}$/.test(code)) return setError('A barcode has 8 to 14 digits.')
 
     setBusy(true)
     try {
-      await onSubmit({ name: name.trim(), price: priceNum, quantity: qtyNum })
+      await onSubmit({ name: name.trim(), price: priceNum, quantity: qtyNum, barcode: code || null })
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not save the service.')
       setBusy(false)
@@ -52,6 +55,14 @@ export default function ServiceForm({ initial, onSubmit, onCancel }: ServiceForm
           onChange={(e) => setQuantity(e.target.value)}
         />
       </div>
+      <FormField
+        label="Barcode"
+        inputMode="numeric"
+        placeholder="Optional"
+        hint="Scan the code printed on the item, or leave it empty and one is created for you."
+        value={barcode}
+        onChange={(e) => setBarcode(e.target.value)}
+      />
       <div className="flex justify-end gap-3 pt-2">
         <Button variant="secondary" onClick={onCancel} disabled={busy}>
           Cancel

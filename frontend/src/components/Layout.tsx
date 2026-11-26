@@ -27,6 +27,7 @@ export default function Layout() {
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const isAdmin = !!user && hasRole(user.role, [Roles.Admin])
+  const isStaff = !!user && hasRole(user.role, [Roles.Admin, Roles.Technician])
 
   // Close the mobile menu after navigating.
   useEffect(() => {
@@ -37,6 +38,8 @@ export default function Layout() {
     { to: '/', label: 'Home', end: true },
     { to: '/services', label: 'Services' },
     ...(user ? [{ to: '/orders', label: isAdmin ? 'All orders' : 'My orders' }] : []),
+    ...(user ? [{ to: '/invoices', label: 'Invoices' }] : []),
+    ...(isStaff ? [{ to: '/staff/counter', label: 'Counter' }] : []),
     ...(isAdmin ? [{ to: '/admin/services', label: 'Manage services' }] : []),
   ]
 
@@ -54,7 +57,7 @@ export default function Layout() {
               </span>
               <span className="font-display text-2xl font-semibold leading-none">Car Service</span>
             </Link>
-            <nav className="hidden gap-6 md:flex" aria-label="Main">
+            <nav className="hidden gap-6 lg:flex" aria-label="Main">
               {links.map((l) => (
                 <NavLink key={l.to} to={l.to} end={l.end} className={desktopLink}>
                   {l.label}
@@ -63,7 +66,7 @@ export default function Layout() {
             </nav>
           </div>
 
-          <div className="hidden items-center gap-3 md:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             {user ? (
               <>
                 <Link
@@ -93,7 +96,7 @@ export default function Layout() {
 
           <button
             type="button"
-            className="rounded-md p-2 hover:bg-chrome md:hidden"
+            className="rounded-md p-2 hover:bg-chrome lg:hidden"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -104,7 +107,7 @@ export default function Layout() {
         </div>
 
         {menuOpen && (
-          <div id="mobile-menu" className="border-t border-line bg-white px-4 py-3 md:hidden">
+          <div id="mobile-menu" className="border-t border-line bg-white px-4 py-3 lg:hidden">
             <nav aria-label="Mobile" className="space-y-1">
               {links.map((l) => (
                 <NavLink key={l.to} to={l.to} end={l.end} className={mobileLink}>

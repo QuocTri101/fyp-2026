@@ -11,6 +11,8 @@ export interface Service {
   name: string
   quantity: number
   price: number
+  /** EAN-13 printed on the item. The API creates one when the admin leaves it empty. */
+  barcode?: string | null
 }
 
 export type ServiceInput = Omit<Service, 'id'>
@@ -34,6 +36,16 @@ export const servicesApi = {
     } catch (err) {
       // ProductApi answers 404 when the table is empty. For the UI that is just "no services".
       if (err instanceof ApiError && err.status === 404) return []
+      throw err
+    }
+  },
+
+  /** What a barcode scanner does: scan, then look the service up. Null when no service has this code. */
+  async findByBarcode(code: string): Promise<Service | null> {
+    try {
+      return await http.get<Service>(`${BASE}/barcode/${encodeURIComponent(code)}`, cache.headers())
+    } catch (err) {
+      if (err instanceof ApiError && (err.status === 404 || err.status === 400)) return null
       throw err
     }
   },
