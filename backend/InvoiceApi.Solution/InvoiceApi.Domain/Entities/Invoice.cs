@@ -1,10 +1,6 @@
 namespace InvoiceApi.Domain.Entities
 {
-    /// <summary>
-    /// A snapshot of an order at the moment it was invoiced. Customer and service details are
-    /// copied in on purpose: an issued invoice must not change when the user or service is edited later.
-    /// OrderId and ClientId point to rows owned by other services, so there are no database foreign keys.
-    /// </summary>
+    
     public class Invoice
     {
         public int Id { get; set; }
