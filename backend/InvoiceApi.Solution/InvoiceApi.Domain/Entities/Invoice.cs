@@ -24,5 +24,6 @@ namespace InvoiceApi.Domain.Entities
 
         public DateTime IssuedAt { get; set; } = DateTime.UtcNow;
         public InvoiceStatus Status { get; set; } = InvoiceStatus.Issued;
+        public string? PickupCode { get; set; }
     }
 }

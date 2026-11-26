@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
+using QRCoder;
 
 namespace InvoiceApi.Infrastructure.Pdf
 {
@@ -85,6 +86,21 @@ namespace InvoiceApi.Infrastructure.Pdf
                             c.Item().Text($"Tax ({invoice.TaxRate:P0}): {invoice.TaxAmount:N2}");
                             c.Item().Text($"Total: {invoice.Total:N2}").Bold().FontSize(14);
                         });
+                        if (!string.IsNullOrEmpty(invoice.PickupCode))
+                        {
+                            var qrPng = MakeQr(invoice.PickupCode);
+                            col.Item().Row(r =>
+                            {
+                                r.ConstantItem(110).Image(qrPng).FitArea();
+                                r.RelativeItem().PaddingLeft(12).Column(c =>
+                                {
+                                    c.Item().Text("Your service pickup code").Bold();
+                                    c.Item().Text($"{invoice.PickupCode[..4]}-{invoice.PickupCode[4..]}").FontSize(16).Bold();
+                                    c.Item().Text("Show this QR code to our staff to receive your service.")
+                                            .FontColor(Colors.Grey.Darken1);
+                                });
+                            });
+                        }
                     });
 
                     page.Footer().AlignCenter().Text(t =>
@@ -98,6 +114,12 @@ namespace InvoiceApi.Infrastructure.Pdf
 
         private static IContainer HeaderCell(IContainer c) =>
             c.Background(Colors.Grey.Lighten3).Padding(6).DefaultTextStyle(x => x.SemiBold());
+        private static byte[] MakeQr(string text)
+        {
+            using var generator = new QRCodeGenerator();
+            using var data = generator.CreateQrCode(text, QRCodeGenerator.ECCLevel.Q);
+            return new PngByteQRCode(data).GetGraphic(10);
+        }
 
         private static IContainer BodyCell(IContainer c) =>
             c.BorderBottom(1).BorderColor(Colors.Grey.Lighten2).Padding(6);

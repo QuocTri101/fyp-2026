@@ -13,6 +13,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.14" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.14" />
+    <PackageReference Include="QRCoder" Version="1.9.0" />
     <PackageReference Include="QuestPDF" Version="2026.9.2" />
     <!-- QuestPDF is added with: dotnet add InvoiceApi.Infrastructure package QuestPDF -->
   </ItemGroup>

@@ -16,6 +16,7 @@ namespace InvoiceApi.Application.DTOs
         decimal TaxAmount,
         decimal Total,
         DateTime IssuedAt,
-        string Status
+        string Status,
+        string? PickupCode
     );
 }

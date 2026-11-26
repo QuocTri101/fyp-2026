@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <NoWarn>NU1510</NoWarn>
+    <!-- Lets you keep the SMTP password out of git: dotnet user-secrets set "Smtp:Password" "..." -->
+    <UserSecretsId>7d3f1b2e-5c1a-4f0e-9a52-0c4e8b7a1d66</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NotificationApi.Infrastructure\NotificationApi.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -20,7 +20,8 @@ namespace InvoiceApi.Application.DTOs.Conversions
             i.TaxAmount,
             i.Total,
             i.IssuedAt,
-            i.Status.ToString());
+            i.Status.ToString(),
+            i.PickupCode);
 
         public static IEnumerable<InvoiceDTO> ToDTOs(IEnumerable<Invoice> invoices) =>
             invoices.Select(ToDTO);

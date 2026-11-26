@@ -11,7 +11,7 @@ using ProductApi.Infrastructure.Data;
 namespace ProductApi.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
-    [Migration("20261126094857_AddProductBarcode")]
+    [Migration("20261126100626_AddProductBarcode")]
     partial class AddProductBarcode
     {
         /// <inheritdoc />

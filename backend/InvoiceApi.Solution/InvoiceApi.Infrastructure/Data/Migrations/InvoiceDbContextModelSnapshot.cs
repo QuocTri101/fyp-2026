@@ -56,6 +56,10 @@ namespace InvoiceApi.Infrastructure.Data.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
+                    b.Property<string>("PickupCode")
+                        .HasMaxLength(12)
+                        .HasColumnType("nvarchar(12)");
+
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 

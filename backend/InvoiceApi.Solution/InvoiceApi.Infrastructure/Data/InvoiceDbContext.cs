@@ -23,6 +23,7 @@ namespace InvoiceApi.Infrastructure.Data
                 e.Property(i => i.TaxAmount).HasPrecision(18, 2);
                 e.Property(i => i.Total).HasPrecision(18, 2);
                 e.Property(i => i.TaxRate).HasPrecision(5, 4);
+                e.Property(i => i.PickupCode).HasMaxLength(12);
             });
         }
     }

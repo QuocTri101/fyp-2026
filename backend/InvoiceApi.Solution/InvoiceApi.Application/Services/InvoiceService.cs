@@ -51,6 +51,7 @@ namespace InvoiceApi.Application.Services
                 TaxRate = taxRate,
                 TaxAmount = tax,
                 Total = subtotal + tax,
+                PickupCode = order.PickupCode,
             };
             return await invoices.CreateAsync(invoice);
         }
