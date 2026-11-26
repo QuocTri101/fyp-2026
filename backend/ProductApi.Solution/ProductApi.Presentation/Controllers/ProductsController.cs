@@ -37,6 +37,22 @@ namespace ProductApi.Presentation.Controllers
             return _product is not null ? Ok(_product) : NotFound("Product not found");
         }
 
+        ///What a barcode scanner calls: scan, then look the product up.
+        [HttpGet("barcode/{code}")]
+        public async Task<ActionResult<ProductDTO>> GetProductByBarcode(string code)
+        {
+            code = code.Trim();
+            if (code.Length is < 8 or > 14 || !code.All(char.IsDigit))
+                return BadRequest("A barcode is 8 to 14 digits.");
+
+            var product = await productInterface.GetByAsync(p => p.Barcode == code);
+            if (product is null)
+                return NotFound("No product has this barcode");
+
+            var (_product, _) = ProductConversion.FromEntity(product, null!);
+            return Ok(_product);
+        }
+
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> CreateProduct(ProductDTO product)

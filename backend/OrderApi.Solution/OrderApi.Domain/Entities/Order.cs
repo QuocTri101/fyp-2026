@@ -8,6 +8,9 @@ namespace OrderApi.Domain.Entities
         public int ClientId { get; set; }
         public int PurchaseQuantity { get; set; }
         public DateTime OrderDate { get; set; } = DateTime.UtcNow;
+        public string? PickupCode { get; set; }
+        public OrderStatus Status { get; set; } = OrderStatus.Confirmed;
+        public DateTime? RedeemedAt { get; set; }
 
     }
 }

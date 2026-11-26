@@ -9,7 +9,8 @@ namespace ProductApi.Application.DTOs.Conversions
             Id = product.Id,
             Name = product.Name,
             Price = product.Price,
-            Quantity = product.Quantity
+            Quantity = product.Quantity,
+            Barcode = string.IsNullOrWhiteSpace(product.Barcode) ? null : product.Barcode.Trim()
         };
 
         public static (ProductDTO?, IEnumerable<ProductDTO>?) FromEntity(Product product, IEnumerable<Product>? products)
@@ -21,7 +22,8 @@ namespace ProductApi.Application.DTOs.Conversions
                     product!.Id,
                     product.Name!,
                     product.Quantity,
-                    product.Price);
+                    product.Price,
+                    product.Barcode);
                 return (singleProduct, null);
             }
             //return list
@@ -32,7 +34,8 @@ namespace ProductApi.Application.DTOs.Conversions
                         p.Id,
                         p.Name!,
                         p.Quantity,
-                        p.Price)).ToList();
+                        p.Price,
+                        p.Barcode)).ToList();
                 return (null, _products);
             }
             return(null, null);
