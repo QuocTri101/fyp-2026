@@ -11,6 +11,6 @@ namespace OrderApi.Domain.Entities
         public string? PickupCode { get; set; }
         public OrderStatus Status { get; set; } = OrderStatus.Confirmed;
         public DateTime? RedeemedAt { get; set; }
-
+        public int? TechnicianId { get; set; }
     }
 }

@@ -7,6 +7,7 @@ import AdminServicesPage from './pages/AdminServicesPage'
 import CounterPage from './pages/CounterPage'
 import HomePage from './pages/HomePage'
 import InvoicesPage from './pages/InvoicesPage'
+import JobsPage from './pages/JobsPage'
 import LoginPage from './pages/LoginPage'
 import NewOrderPage from './pages/NewOrderPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -32,7 +33,12 @@ export default function App() {
           <Route path="invoices" element={<InvoicesPage />} />
         </Route>
 
-        {/* Staff: admins */}
+        {/* Technicians run the jobs; admins can too */}
+        <Route element={<RequireAuth roles={[Roles.Admin, Roles.Technician]} />}>
+          <Route path="tech/jobs" element={<JobsPage />} />
+        </Route>
+
+        {/* Admins take the payment at the counter */}
         <Route element={<RequireAuth roles={[Roles.Admin]} />}>
           <Route path="staff/counter" element={<CounterPage />} />
         </Route>

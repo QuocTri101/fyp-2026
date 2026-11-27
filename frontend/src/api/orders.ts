@@ -16,10 +16,15 @@ export interface Order {
   pickupCode: string | null
   status: OrderStatus
   redeemedAt: string | null
+  /** The user who started the job. Null until a technician scans the QR code. */
+  technicianId: number | null
 }
 
-/** Confirmed: placed online, service not received yet. Redeemed: staff scanned the QR code. */
-export type OrderStatus = 'Confirmed' | 'Redeemed'
+/**
+ * Confirmed: booked online. InProgress: a technician scanned the QR code and is working.
+ * Done: work finished, the customer has to pay. Redeemed: an admin took the payment.
+ */
+export type OrderStatus = 'Confirmed' | 'InProgress' | 'Done' | 'Redeemed'
 
 /** What the user chooses. The id, client and date are filled in by this module. */
 export interface OrderInput {
@@ -64,7 +69,13 @@ export const ordersApi = {
     }
   },
 
-  /** Staff: the customer got their service. Works once per code. */
+  /** Technician: the customer arrived, start the job. Works once per code. */
+  start: (code: string) => expectSuccess(http.post<ApiResponse>(`${BASE}/start`, { code })),
+
+  /** Technician: the work is finished. Only the technician who started the job may do it. */
+  finish: (orderId: number) => expectSuccess(http.post<ApiResponse>(`${BASE}/${orderId}/finish`)),
+
+  /** Admin: the customer paid, close the order. Only a finished job can be closed. */
   redeem: (code: string) => expectSuccess(http.post<ApiResponse>(`${BASE}/redeem`, { code })),
 
   create: (clientId: number, input: OrderInput) =>

@@ -3,6 +3,8 @@
     public enum OrderStatus
     {
         Confirmed,
-        Redeemed
+        InProgress,
+        Done,
+        Redeemed 
     }
 }

@@ -27,7 +27,7 @@ export default function Layout() {
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const isAdmin = !!user && hasRole(user.role, [Roles.Admin])
-  const isStaff = !!user && hasRole(user.role, [Roles.Admin])
+  const isTechnician = !!user && hasRole(user.role, [Roles.Technician])
 
   // Close the mobile menu after navigating.
   useEffect(() => {
@@ -37,9 +37,11 @@ export default function Layout() {
   const links: NavItem[] = [
     { to: '/', label: 'Home', end: true },
     { to: '/services', label: 'Services' },
-    ...(user ? [{ to: '/orders', label: isAdmin ? 'All orders' : 'My orders' }] : []),
-    ...(user ? [{ to: '/invoices', label: 'Invoices' }] : []),
-    ...(isStaff ? [{ to: '/staff/counter', label: 'Counter' }] : []),
+    // Technicians work from the Jobs page. They have no orders or invoices of their own to browse.
+    ...(user && !isTechnician ? [{ to: '/orders', label: isAdmin ? 'All orders' : 'My orders' }] : []),
+    ...(user && !isTechnician ? [{ to: '/invoices', label: 'Invoices' }] : []),
+    ...(isAdmin || isTechnician ? [{ to: '/tech/jobs', label: 'Jobs' }] : []),
+    ...(isAdmin ? [{ to: '/staff/counter', label: 'Counter' }] : []),
     ...(isAdmin ? [{ to: '/admin/services', label: 'Manage services' }] : []),
   ]
 

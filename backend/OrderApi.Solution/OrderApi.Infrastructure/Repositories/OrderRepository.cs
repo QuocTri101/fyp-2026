@@ -42,7 +42,7 @@ namespace OrderApi.Infrastructure.Repositories
                 var order = await FindByIdAsync(entity.Id);
                 if (order is null)
                     return new Response(false, $"Order {entity.Id} is not found");
-                if (order.Status == OrderStatus.Redeemed)
+                if (order.Status == OrderStatus.Confirmed)
                     return new Response(false, "This order was already redeemed and cannot be cancelled");
 
                 context.Orders.Remove(order);
@@ -136,8 +136,8 @@ namespace OrderApi.Infrastructure.Repositories
                 var order = await FindByIdAsync(entity.Id);
                 if(order is null)
                     return new Response(false, "Order is not found");
-                if (order.Status == OrderStatus.Redeemed)
-                    return new Response(false, "This order was already redeemed and cannot be changed");
+                if (order.Status == OrderStatus.Confirmed)
+                    return new Response(false, $"This order was already {Describe(order.Status)} and cannot be changed");
 
                 // Change only what a customer may edit. The code, status and owner stay as they are.
                 // (Replacing the whole row would erase the PickupCode, because the DTO does not carry it.)
@@ -158,30 +158,67 @@ namespace OrderApi.Infrastructure.Repositories
                 return new Response(false, "Error could occured while deleting order");
             }
         }
-        public async Task<Response> RedeemAsync(string code)
+        // The job starts when a technician scans the customer's QR code.
+        public Task<Response> StartAsync(string code, int technicianId) =>
+            MoveAsync(code, OrderStatus.Confirmed, OrderStatus.InProgress, technicianId, "Service started");
+
+        // The technician who started the job finishes it (an admin may finish any job).
+        public async Task<Response> FinishAsync(int orderId, int callerId, bool isAdmin)
+        {
+            try
+            {
+                var changed = await context.Orders
+                    .Where(o => o.Id == orderId && o.Status == OrderStatus.InProgress
+                                && (isAdmin || o.TechnicianId == callerId))
+                    .ExecuteUpdateAsync(s => s.SetProperty(o => o.Status, OrderStatus.Done));
+                if (changed == 1)
+                    return new Response(true, "Service finished. The customer can pay now");
+
+                var existing = await context.Orders.AsNoTracking().FirstOrDefaultAsync(o => o.Id == orderId);
+                if (existing is null)
+                    return new Response(false, "Order is not found");
+                if (existing.Status == OrderStatus.InProgress)
+                    return new Response(false, "Only the technician who started this job can finish it");
+                return new Response(false, $"This order is {Describe(existing.Status)}, so it cannot be finished");
+            }
+            catch (Exception ex)
+            {
+                LogException.LogExceptions(ex);
+                return new Response(false, "Error occured while finishing the order");
+            }
+        }
+        // The admin takes the payment and closes the order. Only a finished job can be redeemed.
+        public Task<Response> RedeemAsync(string code) =>
+            MoveAsync(code, OrderStatus.Done, OrderStatus.Redeemed, null, "Payment taken, order closed");
+        private async Task<Response> MoveAsync(
+            string code, OrderStatus from, OrderStatus to, int? technicianId, string success)
         {
             try
             {
                 code = PickupCode.Normalize(code);
                 if (code.Length != PickupCode.Length)
                     return new Response(false, "This is not a valid pickup code");
-
-                // One atomic UPDATE ... WHERE Status = 'Confirmed'. If two staff scan the same code at
-                // the same moment, only one of them changes a row, so a code can never be used twice.
                 var now = DateTime.UtcNow;
-                var changed = await context.Orders
-                    .Where(o => o.PickupCode == code && o.Status == OrderStatus.Confirmed)
-                    .ExecuteUpdateAsync(s => s
+                var waiting = context.Orders.Where(o => o.PickupCode == code && o.Status == from);
+                var changed = to switch
+                {
+                    OrderStatus.InProgress => await waiting.ExecuteUpdateAsync(s => s
+                        .SetProperty(o => o.Status, OrderStatus.InProgress)
+                        .SetProperty(o => o.TechnicianId, technicianId)),
+                    OrderStatus.Redeemed => await waiting.ExecuteUpdateAsync(s => s
                         .SetProperty(o => o.Status, OrderStatus.Redeemed)
-                        .SetProperty(o => o.RedeemedAt, now));
+                        .SetProperty(o => o.RedeemedAt, now)),
+                    _ => 0
+                };
                 if (changed == 1)
-                    return new Response(true, "Order redeemed");
+                    return new Response(true, success);
 
                 // Nothing changed: either the code does not exist or it was used before.
                 var existing = await context.Orders.AsNoTracking().FirstOrDefaultAsync(o => o.PickupCode == code);
                 return existing is null
                     ? new Response(false, "No order has this code")
-                    : new Response(false, $"Already redeemed on {existing.RedeemedAt:yyyy-MM-dd HH:mm} UTC");
+                    : new Response(false, $"This order is {Describe(existing.Status)}, so it cannot move to {Describe(to)}");
+
             }
             catch (Exception ex)
             {
@@ -189,7 +226,13 @@ namespace OrderApi.Infrastructure.Repositories
                 return new Response(false, "Error occured while redeeming the order");
             }
         }
-
+        private static string Describe(OrderStatus status) => status switch
+        {
+            OrderStatus.Confirmed => "booked",
+            OrderStatus.InProgress => "in progress",
+            OrderStatus.Done => "finished and waiting for payment",
+            _ => "paid and closed"
+        };
         ///Random code that no other order has. A clash is very unlikely, so a few tries is plenty.
         private async Task<string> NewUniqueCodeAsync()
         {

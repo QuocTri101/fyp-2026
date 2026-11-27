@@ -12,6 +12,7 @@ namespace OrderApi.Application.DTOs
         DateTime OrderDate,
         string? PickupCode = null,
         string? Status = null,
-        DateTime? RedeemedAt = null
+        DateTime? RedeemedAt = null,
+        int? TechnicianId = null
     );
 }

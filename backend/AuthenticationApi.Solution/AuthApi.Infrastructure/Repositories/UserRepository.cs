@@ -80,7 +80,8 @@ namespace AuthApi.Infrastructure.Repositories
                 Password = BCrypt.Net.BCrypt.HashPassword(appUserDTO.Password),
                 PhoneNumber = appUserDTO.PhoneNumber,
                 Adress = appUserDTO.Address,
-                Role = appUserDTO.Role
+                //Role = appUserDTO.Role
+                Role = "Customer"
             });
 
             await context.SaveChangesAsync();

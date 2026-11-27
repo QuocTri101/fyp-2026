@@ -19,7 +19,7 @@ import { formatOrderNo, formatPrice } from '../lib/format'
 export default function InvoicesPage() {
   const { user } = useAuth()
   const isAdmin = !!user && hasRole(user.role, [Roles.Admin])
-  const { invoices, loading, error } = useInvoices()
+  const { invoices, loading, error, reload } = useInvoices()
   const { orders } = useOrders()
   const { services } = useServices()
 
@@ -121,6 +121,21 @@ export default function InvoicesPage() {
                       >
                         {workingId === i.id ? 'Working...' : 'Email'}
                       </Button>
+                      {isAdmin && i.status === 'Issued' && (
+                        <Button
+                          size="sm"
+                          disabled={workingId === i.id}
+                          onClick={() =>
+                            run(i, async () => {
+                              const message = await invoicesApi.setStatus(i.id, 'Paid')
+                              await reload()
+                              return message
+                            })
+                          }
+                        >
+                          Mark paid
+                        </Button>
+                      )}
                       {i.pickupCode && (
                         <Button variant="secondary" size="sm" onClick={() => setShowCode(i)}>
                           QR code

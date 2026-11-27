@@ -87,11 +87,11 @@
       ],
       "UpstreamPathTemplate": "/api/orders/{everything}",
       "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": {
-        "TtlSeconds": 60,
-        "Region": "default",
-        "Header": "eCommerce-Caching-Control"
-      },
+      //"FileCacheOptions": {
+      //  "TtlSeconds": 60,
+      //  "Region": "default",
+      //  "Header": "eCommerce-Caching-Control"
+      //},
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
@@ -109,11 +109,11 @@
       ],
       "UpstreamPathTemplate": "/api/orders/{id}",
       "UpstreamHttpMethod": [ "GET" ],
-      "FileCacheOptions": {
-        "TtlSeconds": 60,
-        "Region": "default",
-        "Header": "eCommerce-Caching-Control"
-      },
+      //"FileCacheOptions": {
+      //  "TtlSeconds": 60,
+      //  "Region": "default",
+      //  "Header": "eCommerce-Caching-Control"
+      //},
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []

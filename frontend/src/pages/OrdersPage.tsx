@@ -132,7 +132,7 @@ export default function OrdersPage() {
             </thead>
             <tbody className="divide-y divide-line">
               {sorted.map((o) => {
-                const redeemed = o.status === 'Redeemed'
+                const locked = o.status !== 'Confirmed' // once service starts the order is fixed
                 const invoice = invoiceByOrder.get(o.id)
                 return (
                   <tr key={o.id}>
@@ -169,8 +169,8 @@ export default function OrdersPage() {
                         <Button
                           variant="secondary"
                           size="sm"
-                          disabled={redeemed}
-                          title={redeemed ? 'A redeemed order cannot be changed.' : undefined}
+                          disabled={locked}
+                          title={locked ? 'The service has started, so this order cannot be changed.' : undefined}
                           onClick={() => setEditing(o)}
                         >
                           Edit
@@ -178,10 +178,10 @@ export default function OrdersPage() {
                         <Button
                           variant="danger"
                           size="sm"
-                          disabled={redeemed || !!invoice}
+                          disabled={locked || !!invoice}
                           title={
-                            redeemed
-                              ? 'A redeemed order cannot be cancelled.'
+                            locked
+                              ? 'The service has started, so this order cannot be cancelled.'
                               : invoice
                                 ? 'An invoiced order cannot be cancelled.'
                                 : undefined

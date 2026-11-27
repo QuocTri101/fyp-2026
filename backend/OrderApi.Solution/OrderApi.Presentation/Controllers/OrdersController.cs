@@ -15,15 +15,15 @@ namespace OrderApi.Presentation.Controllers
     [Authorize]
     public class OrdersController(IOrder orderInterface, IOrderService orderService) : ControllerBase
     {
-        private const string StaffRoles = "Admin";
+        private const string StaffRoles = "Admin,Technician";
         // A pickup code is like cash: whoever shows it gets the service. So customers may only
         // see and change their own orders, and only staff can list everything or redeem.
-        private bool IsStaff => User.IsInRole("Admin");
+        private bool IsAdmin => User.IsInRole("Admin");
 
         private int? CurrentUserId =>
             int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var id) ? id : null;
 
-        private bool CanAccess(int clientId) => IsStaff || CurrentUserId == clientId;
+        private bool CanAccess(int clientId) => IsAdmin || CurrentUserId == clientId;
 
         [HttpGet]
         [Authorize(Roles = StaffRoles)]
@@ -33,7 +33,9 @@ namespace OrderApi.Presentation.Controllers
             if (!orders.Any())
                 return NotFound("No orders found.");
             var (_, list) = OrderConversion.FromEntity(null, orders);
-            return !list!.Any() ? NotFound() : Ok(list);
+            if (!list!.Any())
+                return NotFound();
+            return Ok(IsAdmin ? list : list!.Select(o => o with { PickupCode = null }).ToList());
         }
 
         [HttpGet("{id:int}")]
@@ -125,9 +127,35 @@ namespace OrderApi.Presentation.Controllers
             var response = await orderInterface.DeleteAsync(order);
             return response.Flag ? Ok(response) : BadRequest(response);
         }
-        //Staff confirm the customer got the service.Works once per code.
-        [HttpPost("redeem")]
+        // Technician (or admin) scans the QR code when the customer arrives.
+        [HttpPost("start")]
         [Authorize(Roles = StaffRoles)]
+        public async Task<ActionResult<Response>> Start(RedeemRequestDTO request)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            if (CurrentUserId is null)
+                return BadRequest(new Response(false, "Your token has no user id. Please log in again."));
+
+            var response = await orderInterface.StartAsync(request.Code, CurrentUserId.Value);
+            return response.Flag ? Ok(response) : BadRequest(response);
+        }
+
+        // The technician who started the job says the work is finished.
+        [HttpPost("{id:int}/finish")]
+        [Authorize(Roles = StaffRoles)]
+        public async Task<ActionResult<Response>> Finish(int id)
+        {
+            if (CurrentUserId is null)
+                return BadRequest(new Response(false, "Your token has no user id. Please log in again."));
+
+            var response = await orderInterface.FinishAsync(id, CurrentUserId.Value, IsAdmin);
+            return response.Flag ? Ok(response) : BadRequest(response);
+        }
+
+        // Admin only: the customer has paid, so the order is closed. Works once per code.
+        [HttpPost("redeem")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Response>> Redeem(RedeemRequestDTO request)
         {
             if (!ModelState.IsValid)

@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import type { FormEvent } from 'react'
+import { invoicesApi } from '../api/invoices'
 import { ordersApi } from '../api/orders'
 import type { Order } from '../api/orders'
 import { servicesApi } from '../api/services'
@@ -62,18 +63,41 @@ export default function CounterPage() {
     void lookup(code)
   }
 
-  async function handleRedeem(order: Order) {
+  // Taking payment closes the order, then settles its invoice. The order is the part that must
+  // not fail, so it goes first and the invoice work is reported separately.
+  async function handlePay(order: Order) {
     if (!order.pickupCode) return
     setBusy(true)
     setError(null)
+    setNotice(null)
     try {
       await ordersApi.redeem(order.pickupCode)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Could not close the order.')
+      setBusy(false)
+      inputRef.current?.focus()
+      return
+    }
+
+    let message = `Order ${formatOrderNo(order.id)} is paid and closed.`
+    try {
+      const find = async () => (await invoicesApi.list()).find((i) => i.orderId === order.id)
+      let invoice = await find()
+      if (!invoice) {
+        await invoicesApi.createFromOrder(order.id)
+        invoice = await find()
+      }
+      if (invoice && invoice.status === 'Issued') await invoicesApi.setStatus(invoice.id, 'Paid')
+      message += ' Its invoice is marked as paid.'
+    } catch {
+      setError('The order is closed, but its invoice could not be marked as paid. Do that from the Invoices page.')
+    }
+
+    try {
       const fresh = await ordersApi.findByCode(order.pickupCode)
       if (fresh) setResult({ kind: 'order', order: fresh })
-      setNotice(`Order ${formatOrderNo(order.id)} redeemed.`)
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Could not redeem the order.')
     } finally {
+      setNotice(message)
       setBusy(false)
       inputRef.current?.focus()
     }
@@ -83,7 +107,7 @@ export default function CounterPage() {
     <>
       <PageHeader
         title="Counter"
-        description="Scan a customer's QR code to hand over their service, or scan a product barcode to look it up."
+        description="Scan a customer's QR code to take their payment and close the order, or scan a product barcode to look it up."
       />
 
       <form onSubmit={handleSubmit} className="max-w-xl">
@@ -113,7 +137,7 @@ export default function CounterPage() {
         {error && <Alert kind="error">{error}</Alert>}
 
         {result?.kind === 'order' && (
-          <OrderResult order={result.order} service={serviceOf(result.order.productId)} busy={busy} onRedeem={handleRedeem} />
+          <OrderResult order={result.order} service={serviceOf(result.order.productId)} busy={busy} onPay={handlePay} />
         )}
         {result?.kind === 'service' && <ServiceResult service={result.service} />}
       </div>
@@ -125,12 +149,12 @@ function OrderResult({
   order,
   service,
   busy,
-  onRedeem,
+  onPay,
 }: {
   order: Order
   service?: Service
   busy: boolean
-  onRedeem: (order: Order) => void
+  onPay: (order: Order) => void
 }) {
   const redeemed = order.status === 'Redeemed'
   const total = (service?.price ?? 0) * order.purchaseQuantity
@@ -169,20 +193,31 @@ function OrderResult({
           )}
           {redeemed && order.redeemedAt && (
             <div>
-              <dt className="text-steel">Redeemed</dt>
+              <dt className="text-steel">Paid</dt>
               <dd className="font-semibold">{formatDateTime(order.redeemedAt)}</dd>
             </div>
           )}
         </dl>
 
-        {redeemed ? (
-          <p className="rounded-lg bg-bad/5 px-4 py-3 text-sm font-semibold text-bad">
-            This code was already used. Do not hand over the service again.
+        {order.status === 'Confirmed' && (
+          <p className="rounded-lg bg-chrome px-4 py-3 text-sm">
+            The service has not started. A technician scans this code on the Jobs page when the customer arrives.
           </p>
-        ) : (
-          <Button className="w-full" disabled={busy} onClick={() => onRedeem(order)}>
-            {busy ? 'Working...' : 'Redeem order'}
+        )}
+        {order.status === 'InProgress' && (
+          <p className="rounded-lg bg-chrome px-4 py-3 text-sm">
+            A technician (#{order.technicianId}) is still working on this job. Take payment when it is finished.
+          </p>
+        )}
+        {order.status === 'Done' && (
+          <Button className="w-full" disabled={busy} onClick={() => onPay(order)}>
+            {busy ? 'Working...' : `Take payment${service ? ` of ${formatPrice(total)}` : ''} and close order`}
           </Button>
+        )}
+        {redeemed && (
+          <p className="rounded-lg bg-bad/5 px-4 py-3 text-sm font-semibold text-bad">
+            This order is already paid and closed. Do not hand over the service again.
+          </p>
         )}
       </div>
     </section>

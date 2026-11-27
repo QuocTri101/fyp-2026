@@ -9,17 +9,27 @@ const tones: Record<Tone, string> = {
 
 /** Words that mean something per status. Shown as text, not only colour. */
 const TONE_FOR: Record<string, Tone> = {
-  Confirmed: 'warn',
+  Confirmed: 'neutral',
+  InProgress: 'warn',
+  Done: 'warn',
   Redeemed: 'good',
   Issued: 'warn',
   Paid: 'good',
   Void: 'bad',
 }
 
+/** What the customer and staff read. The stored names stay as they are. */
+const LABEL_FOR: Record<string, string> = {
+  Confirmed: 'Booked',
+  InProgress: 'In service',
+  Done: 'Awaiting payment',
+  Redeemed: 'Paid',
+}
+
 export default function StatusBadge({ status }: { status: string }) {
   return (
     <span className={`inline-block rounded-full border px-2.5 py-0.5 text-xs font-semibold ${tones[TONE_FOR[status] ?? 'neutral']}`}>
-      {status}
+      {LABEL_FOR[status] ?? status}
     </span>
   )
 }

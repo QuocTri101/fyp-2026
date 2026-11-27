@@ -47,6 +47,14 @@ export const invoicesApi = {
     return res.message
   },
 
+  /** Admin: Issued, Paid or Void. */
+  async setStatus(invoiceId: number, status: InvoiceStatus): Promise<string> {
+    const res = await http.put<ApiResponse>(`${BASE}/${invoiceId}/status`, { status })
+    if (!res.flag) throw new ApiError(400, res.message)
+    cache.bust()
+    return res.message
+  },
+
   /** Downloads the PDF through the browser's normal save flow. */
   async downloadPdf(invoice: Invoice): Promise<void> {
     const blob = await http.getBlob(`${BASE}/${invoice.id}/pdf`)
