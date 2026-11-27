@@ -8,7 +8,7 @@ export default function ServiceCard({ service }: { service: Service }) {
   const soldOut = service.quantity <= 0
   return (
     <article className="flex flex-col overflow-hidden rounded-xl border border-line bg-white">
-      <ServiceTile name={service.name} className="h-28" />
+      <ServiceTile name={service.name} src={service.imageUrl} className="h-40 w-full" />
       <div className="flex flex-1 flex-col p-4">
         <h3 className="text-2xl leading-tight">{service.name}</h3>
         <p className={`mt-1 text-sm ${soldOut ? 'text-bad' : 'text-steel'}`}>

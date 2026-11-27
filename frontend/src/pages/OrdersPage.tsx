@@ -15,6 +15,7 @@ import OrderForm from '../features/orders/OrderForm'
 import PickupCodeDialog from '../features/orders/PickupCodeDialog'
 import { useOrders } from '../features/orders/useOrders'
 import { useInvoices } from '../features/invoices/useInvoices'
+import ServiceThumb from '../features/services/ServiceThumb'
 import { useServices } from '../features/services/useServices'
 import { formatDateTime, formatOrderNo, formatPrice } from '../lib/format'
 
@@ -50,6 +51,7 @@ export default function OrdersPage() {
   async function handleDelete() {
     if (!deleting) return
     setBusy(true)
+    setNotice(null)
     setActionError(null)
     try {
       await ordersApi.remove(deleting)
@@ -135,7 +137,12 @@ export default function OrdersPage() {
                 return (
                   <tr key={o.id}>
                     <td className="px-4 py-3"><span className="plate">{formatOrderNo(o.id)}</span></td>
-                    <td className="px-4 py-3 font-semibold">{nameOf(o)}</td>
+                    <td className="px-4 py-3">
+                      <div className="flex items-center gap-3">
+                        <ServiceThumb service={byId.get(o.productId)} name={nameOf(o)} />
+                        <span className="font-semibold">{nameOf(o)}</span>
+                      </div>
+                    </td>
                     {isAdmin && <td className="px-4 py-3 tabular-nums">#{o.clientId}</td>}
                     <td className="px-4 py-3 text-right tabular-nums">{o.purchaseQuantity}</td>
                     <td className="px-4 py-3 text-right font-semibold tabular-nums">{formatPrice(totalOf(o))}</td>
@@ -171,8 +178,14 @@ export default function OrdersPage() {
                         <Button
                           variant="danger"
                           size="sm"
-                          disabled={redeemed}
-                          title={redeemed ? 'A redeemed order cannot be cancelled.' : undefined}
+                          disabled={redeemed || !!invoice}
+                          title={
+                            redeemed
+                              ? 'A redeemed order cannot be cancelled.'
+                              : invoice
+                                ? 'An invoiced order cannot be cancelled.'
+                                : undefined
+                          }
                           onClick={() => setDeleting(o)}
                         >
                           Cancel

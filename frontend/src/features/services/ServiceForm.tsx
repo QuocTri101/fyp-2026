@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import type { FormEvent } from 'react'
+import type { ChangeEvent, FormEvent } from 'react'
 import type { Service, ServiceInput } from '../../api/services'
 import Alert from '../../components/Alert'
 import Button from '../../components/Button'
 import FormField from '../../components/FormField'
+import { fileToDataUrl } from '../../lib/image'
+import ServiceTile from './ServiceTile'
 
 interface ServiceFormProps {
   initial?: Service
@@ -16,8 +18,21 @@ export default function ServiceForm({ initial, onSubmit, onCancel }: ServiceForm
   const [price, setPrice] = useState(initial ? String(initial.price) : '')
   const [quantity, setQuantity] = useState(initial ? String(initial.quantity) : '')
   const [barcode, setBarcode] = useState(initial?.barcode ?? '')
+  const [imageUrl, setImageUrl] = useState<string | null>(initial?.imageUrl ?? null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  async function handlePicture(e: ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    e.target.value = '' // lets the admin pick the same file again after removing it
+    if (!file) return
+    setError(null)
+    try {
+      setImageUrl(await fileToDataUrl(file))
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Could not read the picture.')
+    }
+  }
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()
@@ -32,7 +47,7 @@ export default function ServiceForm({ initial, onSubmit, onCancel }: ServiceForm
 
     setBusy(true)
     try {
-      await onSubmit({ name: name.trim(), price: priceNum, quantity: qtyNum, barcode: code || null })
+      await onSubmit({ name: name.trim(), price: priceNum, quantity: qtyNum, barcode: code || null, imageUrl })
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not save the service.')
       setBusy(false)
@@ -42,6 +57,24 @@ export default function ServiceForm({ initial, onSubmit, onCancel }: ServiceForm
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
       {error && <Alert kind="error">{error}</Alert>}
+      <div className="flex items-center gap-4">
+        <ServiceTile name={name || 'Service'} src={imageUrl} className="h-20 w-20 shrink-0 rounded-lg border border-line" textClass="text-2xl" />
+        <div>
+          <p className="text-sm font-semibold">Picture</p>
+          <p className="text-sm text-steel">PNG, JPEG or WebP. It is shrunk before it is saved.</p>
+          <div className="mt-2 flex gap-2">
+            <label className="inline-flex cursor-pointer items-center rounded-lg border border-line bg-white px-3 py-1.5 text-sm font-semibold hover:bg-chrome focus-within:ring-2 focus-within:ring-ink">
+              {imageUrl ? 'Change' : 'Choose picture'}
+              <input type="file" accept="image/png,image/jpeg,image/webp" className="sr-only" onChange={handlePicture} />
+            </label>
+            {imageUrl && (
+              <Button variant="secondary" size="sm" onClick={() => setImageUrl(null)}>
+                Remove
+              </Button>
+            )}
+          </div>
+        </div>
+      </div>
       <FormField label="Service name" value={name} onChange={(e) => setName(e.target.value)} autoFocus />
       <div className="grid gap-4 sm:grid-cols-2">
         <FormField label="Price" type="number" min="0" step="0.01" value={price} onChange={(e) => setPrice(e.target.value)} />

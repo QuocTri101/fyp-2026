@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { invoicesApi } from '../api/invoices'
 import type { Invoice } from '../api/invoices'
@@ -10,6 +10,9 @@ import StatusBadge from '../components/StatusBadge'
 import { useAuth } from '../features/auth/AuthContext'
 import { Roles, hasRole } from '../features/auth/roles'
 import { useInvoices } from '../features/invoices/useInvoices'
+import { useOrders } from '../features/orders/useOrders'
+import ServiceThumb from '../features/services/ServiceThumb'
+import { useServices } from '../features/services/useServices'
 import PickupCodeDialog from '../features/orders/PickupCodeDialog'
 import { formatOrderNo, formatPrice } from '../lib/format'
 
@@ -17,6 +20,14 @@ export default function InvoicesPage() {
   const { user } = useAuth()
   const isAdmin = !!user && hasRole(user.role, [Roles.Admin])
   const { invoices, loading, error } = useInvoices()
+  const { orders } = useOrders()
+  const { services } = useServices()
+
+  // An invoice keeps only the service name, so its picture is found through the order it came from.
+  const serviceByOrder = useMemo(() => {
+    const byId = new Map(services.map((s) => [s.id, s]))
+    return new Map(orders.map((o) => [o.id, byId.get(o.productId)]))
+  }, [orders, services])
 
   const [notice, setNotice] = useState<string | null>(null)
   const [actionError, setActionError] = useState<string | null>(null)
@@ -82,7 +93,12 @@ export default function InvoicesPage() {
                 <tr key={i.id}>
                   <td className="px-4 py-3 font-semibold tabular-nums">{i.invoiceNumber}</td>
                   <td className="px-4 py-3"><span className="plate">{formatOrderNo(i.orderId)}</span></td>
-                  <td className="px-4 py-3">{i.serviceName}</td>
+                  <td className="px-4 py-3">
+                    <div className="flex items-center gap-3">
+                      <ServiceThumb service={serviceByOrder.get(i.orderId)} name={i.serviceName} />
+                      <span>{i.serviceName}</span>
+                    </div>
+                  </td>
                   {isAdmin && <td className="px-4 py-3">{i.customerName}</td>}
                   <td className="px-4 py-3 text-right font-semibold tabular-nums">{formatPrice(i.total)}</td>
                   <td className="px-4 py-3 text-steel">{new Date(i.issuedAt).toLocaleDateString()}</td>

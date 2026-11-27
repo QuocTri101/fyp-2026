@@ -32,8 +32,8 @@ export default function App() {
           <Route path="invoices" element={<InvoicesPage />} />
         </Route>
 
-        {/* Staff: admins and technicians */}
-        <Route element={<RequireAuth roles={[Roles.Admin, Roles.Technician]} />}>
+        {/* Staff: admins */}
+        <Route element={<RequireAuth roles={[Roles.Admin]} />}>
           <Route path="staff/counter" element={<CounterPage />} />
         </Route>
 

@@ -10,7 +10,8 @@ namespace ProductApi.Application.DTOs.Conversions
             Name = product.Name,
             Price = product.Price,
             Quantity = product.Quantity,
-            Barcode = string.IsNullOrWhiteSpace(product.Barcode) ? null : product.Barcode.Trim()
+            Barcode = string.IsNullOrWhiteSpace(product.Barcode) ? null : product.Barcode.Trim(),
+            ImageUrl = string.IsNullOrWhiteSpace(product.ImageUrl) ? null : product.ImageUrl
         };
 
         public static (ProductDTO?, IEnumerable<ProductDTO>?) FromEntity(Product product, IEnumerable<Product>? products)
@@ -23,7 +24,8 @@ namespace ProductApi.Application.DTOs.Conversions
                     product.Name!,
                     product.Quantity,
                     product.Price,
-                    product.Barcode);
+                    product.Barcode,
+                    product.ImageUrl);
                 return (singleProduct, null);
             }
             //return list
@@ -35,7 +37,8 @@ namespace ProductApi.Application.DTOs.Conversions
                         p.Name!,
                         p.Quantity,
                         p.Price,
-                        p.Barcode)).ToList();
+                        p.Barcode,
+                        p.ImageUrl)).ToList();
                 return (null, _products);
             }
             return(null, null);

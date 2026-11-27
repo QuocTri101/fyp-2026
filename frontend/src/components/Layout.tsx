@@ -27,7 +27,7 @@ export default function Layout() {
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const isAdmin = !!user && hasRole(user.role, [Roles.Admin])
-  const isStaff = !!user && hasRole(user.role, [Roles.Admin, Roles.Technician])
+  const isStaff = !!user && hasRole(user.role, [Roles.Admin])
 
   // Close the mobile menu after navigating.
   useEffect(() => {

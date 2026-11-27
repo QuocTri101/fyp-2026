@@ -49,6 +49,12 @@ namespace OrderApi.Infrastructure.Repositories
                 await context.SaveChangesAsync();
                 return new Response(true, "Order deleted successfully");
             }
+            catch (DbUpdateException ex)
+            {
+                // A foreign key (for example the order's invoice) still points at this order.
+                LogException.LogExceptions(ex);
+                return new Response(false, "This order cannot be cancelled because other records, such as an invoice, depend on it");
+            }
             catch (Exception ex)
             {
                 // Log origin exception

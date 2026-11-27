@@ -4,6 +4,7 @@ import type { Service, ServiceInput } from '../api/services'
 import Alert from '../components/Alert'
 import Button from '../components/Button'
 import Barcode from '../components/Barcode'
+import ServiceThumb from '../features/services/ServiceThumb'
 import ConfirmDialog from '../components/ConfirmDialog'
 import Modal from '../components/Modal'
 import PageHeader from '../components/PageHeader'
@@ -85,7 +86,12 @@ export default function AdminServicesPage() {
             <tbody className="divide-y divide-line">
               {services.map((s) => (
                 <tr key={s.id}>
-                  <td className="px-4 py-3 font-semibold">{s.name}</td>
+                  <td className="px-4 py-3">
+                    <div className="flex items-center gap-3">
+                      <ServiceThumb service={s} name={s.name} />
+                      <span className="font-semibold">{s.name}</span>
+                    </div>
+                  </td>
                   <td className="px-4 py-3 text-right tabular-nums">{formatPrice(s.price)}</td>
                   <td className={`px-4 py-3 text-right tabular-nums ${s.quantity <= 0 ? 'text-bad' : ''}`}>{s.quantity}</td>
                   <td className="px-4 py-3">

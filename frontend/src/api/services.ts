@@ -13,6 +13,8 @@ export interface Service {
   price: number
   /** EAN-13 printed on the item. The API creates one when the admin leaves it empty. */
   barcode?: string | null
+  /** Small photo as a data URL (resized in the browser before upload), or null for the initials tile. */
+  imageUrl?: string | null
 }
 
 export type ServiceInput = Omit<Service, 'id'>

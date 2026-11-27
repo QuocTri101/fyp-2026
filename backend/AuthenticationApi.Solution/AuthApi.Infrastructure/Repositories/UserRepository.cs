@@ -52,7 +52,7 @@ namespace AuthApi.Infrastructure.Repositories
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var claims = new List<Claim>
             {
-                //new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new(ClaimTypes.Name, user.Name!),
                 new(ClaimTypes.Email, user.Email!)
             };

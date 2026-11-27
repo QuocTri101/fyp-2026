@@ -6,7 +6,7 @@ using System.Security.Claims;
 
 namespace NotificationApi.Presentation.Controllers
 {
-    // Any signed-in user can ask for an email about their own order or invoice. Admins and technicians
+    // Any signed-in user can ask for an email about their own order or invoice. Admins 
     // can ask for any. The email always goes to the customer's address on file, never to one the caller types.
     [Route("api/[controller]")]
     [ApiController]
@@ -19,7 +19,7 @@ namespace NotificationApi.Presentation.Controllers
                 ?? User.FindFirstValue("sub"),
             out var id) ? id : 0;
 
-        private bool IsStaff => User.IsInRole("Admin") || User.IsInRole("Technician");
+        private bool IsStaff => User.IsInRole("Admin");
 
         private const string NoUserId = "Your token has no user id. Please log in again.";
 

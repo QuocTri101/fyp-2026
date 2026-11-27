@@ -15,10 +15,10 @@ namespace OrderApi.Presentation.Controllers
     [Authorize]
     public class OrdersController(IOrder orderInterface, IOrderService orderService) : ControllerBase
     {
-        private const string StaffRoles = "Admin,Technician";
+        private const string StaffRoles = "Admin";
         // A pickup code is like cash: whoever shows it gets the service. So customers may only
         // see and change their own orders, and only staff can list everything or redeem.
-        private bool IsStaff => User.IsInRole("Admin") || User.IsInRole("Technician");
+        private bool IsStaff => User.IsInRole("Admin");
 
         private int? CurrentUserId =>
             int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var id) ? id : null;
